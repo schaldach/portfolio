@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&family=Source+Code+Pro:wght@400;600;800&display=swap');
+
+:root{
+  --color1: #000000;
+  --color2: #da4167;
+  --color3: #832161;
+  --color4: #3d2645;
+  --color5: #f0eff4;
+}
+
+body, html{
+  margin: 0;
+  padding: 0;
+  background-color: var(--color5);
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+  background-color: var(--color1);
+  font-size: 20px;
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  font-weight: 300;
+  color: var(--color5);
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+.codetext{
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+}
+.codetext span{
+  color: var(--color2);
+}
+main{
+  padding: 10vh 0 0 0;
+}
+.pagesection{
+  padding: 5vh 5vw;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  background-color: var(--color5);
+  color: var(--color1);
+  font-size: 100px;
+}
+.pagesection:nth-child(2n){
+  background-color: var(--color4);
+  color: var(--color5);
+}
+.pagesection:nth-child(2n) .codetext span{
+  color: var(--color2);
+}
+.sectiondescription{
+  font-size: 40px;
+}
