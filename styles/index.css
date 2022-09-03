@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&family=Source+Code+Pro:wght@400;600;800&display=swap');
 
 :root{
-  --color1: #000000;
-  --color2: #da4167;
-  --color3: #832161;
-  --color4: #3d2645;
-  --color5: #f0eff4;
+  --color1: #431259;
+  --color2: #60308c;
+  --color3: #805ebf;
+  --color4: #b3beff;
+  --color5: #ffffff;
 }
 
 body, html{
@@ -16,42 +16,49 @@ body, html{
 }
 
 .navbar{
-  background-color: var(--color1);
-  font-size: 20px;
-  position: fixed;
-  width: 100vw;
-  height: 10vh;
+  background-color: var(--color5);
+  font-size: clamp(5px, 2.5vw, 22px);
+  padding: 3.5vh 0;
   font-weight: 300;
-  color: var(--color5);
+  color: var(--color1);
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 3fr repeat(4, 1fr);
+}
+.title{
+  font-size: clamp(10px, 3vw, 30px);
+  display: grid;
+  place-items: center;
+}
+.navbar a{
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: var(--color3);
+}
+.navbar a:hover{
+  color: var(--color4);
+}
+.navbar a:not(.first){
+  border-left: 1px solid var(--color3);
 }
 .codetext{
   font-family: 'Source Code Pro', monospace;
   font-weight: 600;
 }
 .codetext span{
-  color: var(--color2);
-}
-main{
-  padding: 10vh 0 0 0;
+  color: var(--color3);
 }
 .pagesection{
-  padding: 5vh 5vw;
+  padding: 2.5vh 5vw;
   display: flex;
   gap: 20px;
   flex-direction: column;
   background-color: var(--color5);
   color: var(--color1);
-  font-size: 100px;
-}
-.pagesection:nth-child(2n){
-  background-color: var(--color4);
-  color: var(--color5);
-}
-.pagesection:nth-child(2n) .codetext span{
-  color: var(--color2);
+  font-size: 9vw;
 }
 .sectiondescription{
   font-size: 40px;
