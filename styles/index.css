@@ -1,63 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&family=Source+Code+Pro:wght@400;600;800&display=swap');
 
 :root{
-  --color1: #431259;
-  --color2: #60308c;
-  --color3: #805ebf;
-  --color4: #b3beff;
-  --color5: #ffffff;
+  --background1: #25293a;
+  --background2: #292d3e;
+  --background3: #31364a;
+  --color1: #c792ea;
+  --color2: #6baaf3;
+  --color3: #ddcb64;
+  --color4: #f25561;
+  --color5: #c3e88d;
+  --color6: #ffffff;
+  --color7: #929ac1;
+  --color8: #7cddff;
 }
 
 body, html{
   margin: 0;
   padding: 0;
-  background-color: var(--color5);
+  background-color: var(--background1);
   font-family: 'Poppins', sans-serif;
 }
 
 .navbar{
-  background-color: var(--color5);
+  background-color: var(--background3);
   font-size: clamp(5px, 2.5vw, 22px);
-  padding: 3.5vh 0;
   font-weight: 300;
-  color: var(--color1);
+  padding: 2px;
   display: grid;
   place-items: center;
-  grid-template-columns: 3fr repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  color: var(--color7);
 }
-.title{
-  font-size: clamp(10px, 3vw, 30px);
-  display: grid;
-  place-items: center;
-}
-.navbar a{
+.navbar>div{
+  padding: 3.5vh 0;
   width: 100%;
-  box-sizing: border-box;
   display: grid;
   place-items: center;
-  text-decoration: none;
-  color: var(--color3);
+  cursor: pointer;
 }
-.navbar a:hover{
-  color: var(--color4);
+.navbar>div>div{
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-.navbar a:not(.first){
-  border-left: 1px solid var(--color3);
+.navbar div:hover{
+  color: var(--color6);
+}
+.navbar .selectednav{
+  color: var(--color6);
+  background-color: var(--background1);
 }
 .codetext{
   font-family: 'Source Code Pro', monospace;
   font-weight: 600;
 }
 .codetext span{
-  color: var(--color3);
+  color: var(--color4);
 }
 .pagesection{
   padding: 2.5vh 5vw;
   display: flex;
   gap: 20px;
   flex-direction: column;
-  background-color: var(--color5);
-  color: var(--color1);
+  background-color: var(--background2);
+  color: var(--color8);
   font-size: 9vw;
 }
 .sectiondescription{
