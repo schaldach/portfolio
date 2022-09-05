@@ -3,12 +3,12 @@ import React, {useState} from "react"
 import '../styles/index.css'
 
 function MyApp({ Component, pageProps }) {
-  const [currentPage, changePage] = useState('portfolio')
+  const [currentPage, changePage] = useState('home')
   return (
   <>
     <Navbar currentPage={currentPage} changePage={changePage}/>
     <main>
-      <Component {...pageProps} />
+      <Component changePage={changePage} {...pageProps} />
     </main>
   </>)
 }
