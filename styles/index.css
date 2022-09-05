@@ -2,8 +2,7 @@
 
 :root{
   --background1: #ffffff;
-  --background2: #e9ecef;
-  --background3: #dee2e6;
+  --background2: #dee2e6;
   --color1: #64b5f6;
   --color2: #1e88e5;
   --color3: #0d47a1;
@@ -51,8 +50,11 @@ body, html{
   color: var(--color4);
 }
 .navbar>.selectednav{
-  color: var(--color1);
-  border-color: var(--color1);
+  color: var(--color2);
+  border-color: var(--color2);
+}
+.navbar>.selectednav:hover{
+  color: var(--color4);
 }
 .pagesection{
   position: relative;
@@ -60,29 +62,33 @@ body, html{
   min-height: 85vh;
   display: grid;
   place-items: center;
-  background-color: var(--background1);
+  background-color: var(--color4);
   overflow-x: hidden;
 }
+.projectsection{
+  justify-content: left;
+}
 .homesection{
-  overflow-y: hidden;
+  background-color: var(--color4);
 }
 .home{
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
   gap: 30px;
 }
 .title{
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  color: var(--color4);
+  color: var(--background1);
   font-size: 5vw;
 }
 .title span{
   color: var(--color2);
 }
 .homebutton{
-  color: var(--color2);
+  color: var(--background1);
   font-size: 20px;
   display: flex;
   font-weight: 700;
@@ -91,15 +97,15 @@ body, html{
   padding: 15px 30px;
   border-radius: 10px;
   gap: 10px;
-  border: solid 2px var(--color2);
+  border: solid 2px var(--background1);
   font-family: 'Quicksand', sans-serif;
   z-index: 1;
   transition: 0.5s;
   box-shadow: inset 0 0 0 0;
 }
 .homebutton:hover{
-  color: var(--background1);
-  box-shadow: inset 220px 0 0 0 var(--color2);
+  color: var(--color2);
+  box-shadow: inset 220px 0 0 0 var(--background1);
 }
 .homebutton svg{
   width: 20px;
@@ -107,22 +113,16 @@ body, html{
 }
 .showprojects{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   gap: 40px;
+  margin-top: -75px;
 }
 .showprojects>div{
-  height: 150px;
-  min-width: 200px;
-  padding: 25px;
+  width: 90vw;
   display: flex;
   gap: 15px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border-radius: 25px;
-  box-shadow: 5px 5px 20px -10px var(--color4);
 }
 .showprojects svg{
   height: 40px;
@@ -133,12 +133,16 @@ body, html{
   gap: 10px;
 }
 .showtitle{
-  text-align: center;
+  width: 100%;
   font-size: 50px;
   font-family: 'Raleway', sans-serif;
+  display: flex;
+  gap: 20px;
+  color: var(--color1);
+  align-items: center;
 }
 .showicons>a{
-  background-color: var(--background2);
+  background-color: var(--background1);
   display: grid;
   place-items: center;
   color: var(--color4);
@@ -147,33 +151,32 @@ body, html{
   width: 50px;
 }
 .showicons>a:hover{
-  background-color: var(--background3);
+  background-color: var(--background2);
 }
-.curve {
+.showdescription{
+  color: var(--background1);
+  font-size: 20px;
+}
+.custom-shape-divider-top-1662411529 {
   position: absolute;
-  height: 250px;
+  top: 0;
+  left: 0;
   width: 100%;
-  bottom: -10px;
-  z-index: 0;
-  text-align: center;
+  overflow: hidden;
+  line-height: 0;
 }
-.curve::after {
-  content: '';
+
+.custom-shape-divider-top-1662411529 svg {
+  position: relative;
   display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 65%;
-  height: 100%;
-  transform: translate(-10%, 60%);
-  background-color: var(--color2)
+  width: calc(130% + 1.3px);
+  height: 100px;
 }
-.curve::before {
-  content: '';
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 55%;
-  height: 100%;
-  transform: translate(85%, 60%);
-  background-color: var(--color2)
+
+.custom-shape-divider-top-1662411529 .shape-fill {
+  fill: #ffffff;
+}
+.techused{
+  display: flex;
+  gap: 10px;
 }
