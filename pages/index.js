@@ -3,9 +3,10 @@ import Link from "next/link";
 function LandingPage({changePage}) {
   return (
     <div>
-      <div className="pagesection">
+      <div className="pagesection homesection">
+        <div className="curve"></div>
         <div className="home">
-        <div className="title">Olá, eu sou <span>Gabriel Schaldach</span><br/> e este é o meu portfólio.</div>
+        <div className="title">Olá, eu sou <span>Gabriel Schaldach</span><br/> e este é o meu portfólio<br/> como <span>desenvolvedor web.</span></div>
         <Link href='/about'>
         <div className="homebutton" onClick={() => changePage('about')}>CONTINUAR
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">

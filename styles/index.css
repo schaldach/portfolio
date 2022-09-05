@@ -28,8 +28,8 @@ body, html{
   color: var(--color4);
 }
 .navbar>div{
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -55,11 +55,16 @@ body, html{
   border-color: var(--color1);
 }
 .pagesection{
+  position: relative;
   padding: 2.5vh 5vw;
   min-height: 85vh;
   display: grid;
   place-items: center;
   background-color: var(--background1);
+  overflow-x: hidden;
+}
+.homesection{
+  overflow-y: hidden;
 }
 .home{
   display: flex;
@@ -71,7 +76,7 @@ body, html{
   font-family: 'Raleway', sans-serif;
   text-align: center;
   color: var(--color4);
-  font-size: 5.5vw;
+  font-size: 5vw;
 }
 .title span{
   color: var(--color2);
@@ -88,10 +93,13 @@ body, html{
   gap: 10px;
   border: solid 2px var(--color2);
   font-family: 'Quicksand', sans-serif;
+  z-index: 1;
+  transition: 0.5s;
+  box-shadow: inset 0 0 0 0;
 }
 .homebutton:hover{
-  background-color: var(--color2);
   color: var(--background1);
+  box-shadow: inset 220px 0 0 0 var(--color2);
 }
 .homebutton svg{
   width: 20px;
@@ -140,4 +148,32 @@ body, html{
 }
 .showicons>a:hover{
   background-color: var(--background3);
+}
+.curve {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  bottom: -10px;
+  z-index: 0;
+  text-align: center;
+}
+.curve::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 65%;
+  height: 100%;
+  transform: translate(-10%, 60%);
+  background-color: var(--color2)
+}
+.curve::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  transform: translate(85%, 60%);
+  background-color: var(--color2)
 }
