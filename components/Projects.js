@@ -6,7 +6,7 @@ import NewtonLogo from '../public/newtonlogo.png'
 
 function Projects() {
     return (
-    <div className="pagesection projectsection">
+    <div className="pagesection">
         <a id='projects'></a>
         <div className="custom-shape-divider-top-wrapper custom-shape-divider-top-1662484264">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
