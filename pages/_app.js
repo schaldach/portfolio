@@ -1,18 +1,17 @@
 import Navbar from "../components/Navbar"
-import React, {useState} from "react"
+import React from "react"
 import Head from 'next/head'
 import '../styles/index.css'
 
 function MyApp({ Component, pageProps }) {
-  const [currentPage, changePage] = useState('home')
   return (
   <>
     <Head>
       <title>Gabriel Schaldach Morgado</title>
     </Head>
-    <Navbar currentPage={currentPage} changePage={changePage}/>
+    <Navbar/>
     <main>
-      <Component changePage={changePage} {...pageProps} />
+      <Component {...pageProps} />
     </main>
   </>)
 }

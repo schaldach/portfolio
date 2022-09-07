@@ -10,6 +10,7 @@
 }
 
 body, html{
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   background-color: var(--background1);
@@ -34,7 +35,7 @@ body, html{
   cursor: pointer;
 }
 .navbar div:hover{
-  color: var(--color3);
+  color: var(--color2);
 }
 .navbar>.vercel{
   border: none;
@@ -48,17 +49,23 @@ body, html{
 .navbar>.vercel:hover{
   color: var(--color4);
 }
-.navbar>.selectednav{
-  color: var(--color2);
+.navbar a{
+  color: inherit;
+  text-decoration: none;
 }
 .pagesection{
   position: relative;
-  padding: 2.5vh 5vw;
-  min-height: 85vh;
+  padding: 2.5vh;
+  min-height: 70vh;
   background-color: var(--color4);
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
 }
 .homesection{
+  padding-top: 75px;
   background-color: var(--color4);
   display: grid;
   place-items: center;
@@ -74,11 +81,11 @@ body, html{
   font-family: 'Raleway', sans-serif;
   text-align: center;
   color: var(--background1);
-  font-size: 5vw;
+  font-size: 5.5vw;
 }
 .description{
   text-align: left;
-  font-size: 3.25vw;
+  font-size: 30px;
 }
 .title span{
   color: var(--color2);
@@ -86,10 +93,13 @@ body, html{
 .homebutton{
   color: var(--background1);
   font-size: 20px;
+  width: fit-content;
   display: flex;
+  position: relative;
   font-weight: 700;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
   padding: 15px 30px;
   border-radius: 10px;
   gap: 10px;
@@ -110,25 +120,25 @@ body, html{
 .about{
   margin-top: 75px;
   display: flex;
+  color: var(--color4);
   flex-direction: column;
+  padding: 0 5vw;
   gap: 15px;
 }
 .showprojects{
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  gap: 50px;
   margin-top: 75px;
+  width: 75%;
 }
 .showprojects>div{
   width: fit-content;
   height: fit-content;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  gap: 50px;
   position: relative;
-  align-items: center;
   justify-content: center;
   border: 2px solid var(--color4);
 }
@@ -138,9 +148,7 @@ body, html{
 }
 .showicons{
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
   height: 100%;
   gap: 10px;
 }
@@ -149,10 +157,18 @@ body, html{
   font-size: 50px;
   font-family: 'Raleway', sans-serif;
   display: flex;
-  flex-direction: column;
   gap: 20px;
   color: var(--color2);
   align-items: center;
+}
+.showtext{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.showdescription{
+  font-size: 25px;
+  color: var(--background1);
 }
 .showicons>a{
   background-color: var(--background1);
@@ -165,10 +181,6 @@ body, html{
 }
 .showicons>a:hover{
   background-color: var(--background2);
-}
-.showdescription{
-  color: var(--background1);
-  font-size: 20px;
 }
 .custom-shape-divider-top-1662411529 svg {
   position: relative;
@@ -199,12 +211,12 @@ body, html{
 }
 .score{
   width: 500px;
-  background-color: var(--color3);
+  background-color: var(--color4);
   color: var(--background1);
   height: 50px;
 }
 .score>div{
-  background-color: var(--color2);
+  background-color: var(--color3);
   height: 100%;
   display: flex;
   align-items: center;
@@ -213,7 +225,7 @@ body, html{
   font-size: 25px;
 }
 .score:hover>div{
-  background-color: var(--color1);
+  background-color: var(--color2);
 }
 
 .custom-shape-divider-top-1662483748 svg {
@@ -225,7 +237,7 @@ body, html{
 }
 
 .custom-shape-divider-top-1662483748 .shape-fill {
-  fill: #FFFFFF;
+  fill: var(--background1);
 }
 
 .custom-shape-divider-top-1662483900 svg {
@@ -236,7 +248,7 @@ body, html{
 }
 
 .custom-shape-divider-top-1662483900 .shape-fill {
-  fill: #FFFFFF;
+  fill: var(--color4);
 }
 .custom-shape-divider-top-1662484264 {
   position: absolute;
@@ -256,7 +268,7 @@ body, html{
 }
 
 .custom-shape-divider-top-1662484264 .shape-fill {
-  fill: #FFFFFF;
+  fill: var(--background1);
 }
 .custom-shape-divider-top-wrapper{
   position: absolute;
@@ -275,7 +287,7 @@ body, html{
 }
 
 .custom-shape-divider-top-1662484564 .shape-fill {
-  fill: #FFFFFF;
+  fill: var(--color4);
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -288,4 +300,28 @@ body, html{
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--background2);
+}
+.pagesection:nth-child(even){
+  background-color: var(--background1);
+}
+.pagesection:nth-child(even) .title{
+  color: var(--color4);
+}
+.pagesection:nth-child(even) .homebutton{
+  color: var(--color4);
+  border: 2px solid var(--color4);
+  box-shadow: inset 0 0 0 0;
+}
+.pagesection:nth-child(even) .homebutton:hover{
+  box-shadow: inset 220px 0 0 0 var(--color4);
+  color: var(--background1);
+}
+.imgwrapper{
+  border: solid 2px var(--color2);
+}
+.whiteimg{
+  background-color: var(--background1);
+}
+.darkimg{
+  background-color: var(--color4);
 }

@@ -11,6 +11,7 @@ import Image from 'next/image'
 function About() {
     return (
     <div className="pagesection">
+      <a className='linkanchor' id='about'></a>
       <div className="custom-shape-divider-top-wrapper custom-shape-divider-top-1662483900">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
@@ -19,44 +20,15 @@ function About() {
         </svg>
       </div>
       <div className="about">
-        <div className="description title">Sou um estudante brasileiro de 17 anos. </div>
+        <div className="description title">Sou a casnjsa um estudante brasileiro de 17 anos. </div>
         <div className="description title">Gosto de trabalhar em projetos <span>originais</span> e com <span>personalidade.</span> </div>
         <div className="description title">Tenho experiência com sites responsivos e React.js/Next.js, no <span>Frontend</span>, e databases Postgres, no <span>Backend.</span></div>
       </div>
-      <div className="rankings">
-        <div>
-          <Image src={HtmlLogo} width='50' height='50' layout='fixed'></Image>
-          <div className='score'><div style={{width:'85%'}}>HTML</div></div>
-        </div>
-        <div>
-          <Image src={CssLogo} width='50' height='50' layout='fixed'></Image>
-          <div className='score'><div style={{width:'90%'}}>CSS</div></div>
-        </div>
-        <div>
-          <Image src={JsLogo} width='50' height='50' layout='fixed'></Image>
-          <div className='score'><div style={{width:'90%'}}>JavaScript</div></div>
-        </div>
-        <div>
-          <Image src={ReactLogo} width='50' height='48' layout='fixed'></Image>
-          <div className='score'><div style={{width:'75%'}}>React</div></div>
-        </div>
-        <div>
-          <Image src={NextLogo} width='50' height='25' layout='fixed'></Image>
-          <div className='score'><div style={{width:'75%'}}>Next</div></div>
-        </div>
-        <div>
-          <Image src={SupabaseLogo} width='50' height='50' layout='fixed'></Image>
-          <div className='score'><div style={{width:'70%'}}>Supabase</div></div>
-        </div>
-        <div>
-          <Image src={P5Logo} width='50' height='50' layout='fixed'></Image>
-          <div className='score'><div style={{width:'85%'}}>p5</div></div>
-        </div>
-        <div>
-          <Image src={PythonLogo} width='50' height='50' layout='fixed'></Image>
-          <div className='score'><div style={{width:'60%'}}>Python</div></div>
-        </div>
-      </div>
+      <a href="#projects" className="homebutton">PROJETOS
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
+        </svg>
+      </a>
     </div>
     );
 }
