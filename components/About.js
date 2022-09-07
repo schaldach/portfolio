@@ -1,13 +1,3 @@
-import JsLogo from '../public/jslogo.png'
-import HtmlLogo from '../public/htmllogo.png'
-import CssLogo from '../public/csslogo.png'
-import NextLogo from '../public/nextlogo.png'
-import ReactLogo from '../public/reactlogo.png'
-import P5Logo from '../public/p5logo.png'
-import SupabaseLogo from '../public/supabaselogo.png'
-import PythonLogo from '../public/pythonlogo.png'
-import Image from 'next/image'
-
 function About() {
     return (
     <div className="pagesection">
@@ -20,9 +10,9 @@ function About() {
         </svg>
       </div>
       <div className="about">
-        <div className="description title">Sou a casnjsa um estudante brasileiro de 17 anos. </div>
-        <div className="description title">Gosto de trabalhar em projetos <span>originais</span> e com <span>personalidade.</span> </div>
-        <div className="description title">Tenho experiência com sites responsivos e React.js/Next.js, no <span>Frontend</span>, e databases Postgres, no <span>Backend.</span></div>
+        <div className="description title">&#128073;Me chamo Gabriel Schaldach Morgado, estou no 3° ano do Ensino Médio e tenho 17 anos. </div>
+        <div className="description title">&#128073;Gosto de trabalhar em projetos <span>originais</span> e com <span>personalidade.</span> </div>
+        <div className="description title">&#128073;Tenho experiência com sites responsivos e React.js/Next.js, no <span>Frontend</span>, e databases Postgres, no <span>Backend.</span></div>
       </div>
       <a href="#projects" className="homebutton">PROJETOS
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">

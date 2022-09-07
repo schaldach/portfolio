@@ -41,7 +41,7 @@ function Projects() {
                             <a href="https://nolt-opal.vercel.app/" target='_blank' rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" /></svg></a>
                         </div>
                     </div>
-                    <div className="showdescription">O Nolt é um site com o objetivo de organizar todas as anotações e lembretes pessoais em somente um lugar. Ele possui o Backend feito com Supabase e Frontend com Next.</div>
+                    <div className="showdescription">O Pong do Morgs é uma releitura do jogo Pong, com a principal mecânica única de powerups &#40;18 ao total&#41;. Eles são coletados pelos jogadores durante a partida e fazem cada rodada da partida única.</div>
                 </div>
             </div>
             <div>
