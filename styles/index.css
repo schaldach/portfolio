@@ -86,7 +86,6 @@ body, html{
 .description{
   text-align: left;
   font-size: 30px;
-  width: 75%;
 }
 .title span{
   color: var(--color2);
@@ -120,11 +119,21 @@ body, html{
 }
 .about{
   margin-top: 75px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  align-items: center;
+  padding: 0 7.5vw;
   color: var(--color4);
-  flex-direction: column;
-  padding: 0 5vw;
   gap: 15px;
+}
+.about>span{
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px var(--color4);
+}
+.about>div{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 .showprojects{
   display: flex;
@@ -194,8 +203,8 @@ body, html{
   fill: #ffffff;
 }
 .techused{
-  display: flex;
-  gap: 10px;
+  color: var(--color2);
+  font-size: 22px;
 }
 .rankings{
   margin-top: 50px;
