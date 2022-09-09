@@ -24,7 +24,7 @@ body, html{
   height: 10vh;
   display: grid;
   place-items: center;
-  grid-template-columns: 3fr repeat(4, 1fr) 1fr;
+  grid-template-columns: 2fr repeat(4, 1fr);
   color: var(--color4);
 }
 .navbar>div{
@@ -61,7 +61,7 @@ body, html{
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
   align-items: center;
 }
 .homesection{
@@ -81,11 +81,11 @@ body, html{
   font-family: 'Raleway', sans-serif;
   text-align: center;
   color: var(--background1);
-  font-size: 5.5vw;
+  font-size: clamp(30px,5.5vw,100px);
 }
 .description{
   text-align: left;
-  font-size: 30px;
+  font-size: 25px;
 }
 .title span{
   color: var(--color2);
@@ -139,17 +139,32 @@ body, html{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
   margin-top: 75px;
-  width: 75%;
+  width: 90%;
+}
+.showprojects .otherprojects{
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color: var(--background1);
+}
+.otherprojects a{
+  color: var(--color2);
+  text-decoration: none;
+}
+.otherprojects a:hover{
+  color: var(--color3);
 }
 .showprojects>div{
   width: fit-content;
   height: fit-content;
-  display: flex;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
   position: relative;
   justify-content: center;
+  align-items: center;
   border: 2px solid var(--color4);
 }
 .showprojects svg{
@@ -296,14 +311,7 @@ body, html{
   color: var(--background1);
 }
 .imgwrapper{
-  border: solid 2px var(--color2);
   filter: blur(1.5px);
-}
-.whiteimg{
-  background-color: var(--background1);
-}
-.darkimg{
-  background-color: var(--color4);
 }
 .contact{
   display: flex;
@@ -320,8 +328,9 @@ body, html{
 .contactbutton{
   font-size: 60px;
   user-select: none;
-  gap: 25px;
+  gap: 15px;
   display: flex;
+  align-items: center;
   color: var(--color4);
   font-weight: 700;
   border: none;
@@ -363,5 +372,58 @@ body, html{
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+.responsivebr{
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+  .showprojects>div{
+    grid-template-columns: 1fr;
+    place-items: center;
+    grid-template-rows: 240px 1fr;
+  }
+  .about{
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 1px;
+    place-items: center;
+  }
+  .about>div:nth-child(1){
+    grid-row: -1;
+  }
+  .navbar>.vercel{
+    display: none;
+  }
+  .navbar{
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 12px;
+  }
+  .showtitle{
+    font-size: 30px;
+    gap: 10px;
+  }
+  .showprojects svg{
+    height: 30px;
+    width: 30px;
+  }
+  .showicons>a{
+    width: 40px;
+    height: 40px;
+  }
+  .pcbr{
+    display: none;
+  }
+  .responsivebr{
+    display: block;
+  }
+  .showprojects>div{
+    gap: 5px;
+  }
+  .showdescription{
+    font-size: 18px;
+  }
+  .showprojects>div:not(.last){
+    border-bottom: 2px solid var(--color2);
   }
 }

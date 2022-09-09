@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import VercelLogo from '../public/vercellogo.png'
 
@@ -11,7 +10,6 @@ function Navbar() {
             <a href="#about"><div>SOBRE MIM</div></a>
             <a href="#projects"><div>PROJETOS</div></a>
             <a href="#contact"><div>CONTATO</div></a>
-            <div></div>
         </div>
     );
 }

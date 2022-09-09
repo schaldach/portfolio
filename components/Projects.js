@@ -18,7 +18,7 @@ function Projects() {
         <div className="showprojects">
             <div>
                 <div className="imgwrapper whiteimg">
-                    <Image layout="fixed" height='300' width='400' src={NoltLogo}></Image>
+                    <Image layout="fixed" height='240' width='320' src={NoltLogo}></Image>
                 </div>
                 <div className="showtext">
                     <div className="showtitle">Nolt
@@ -33,7 +33,7 @@ function Projects() {
             </div>
             <div>
                 <div className="imgwrapper darkimg">
-                    <Image layout="fixed" height='300' width='400' src={PongLogo}></Image>
+                    <Image layout="fixed" height='240' width='320' src={PongLogo}></Image>
                 </div>
                 <div className="showtext">
                     <div className="showtitle">Pong do Morgs
@@ -48,7 +48,7 @@ function Projects() {
             </div>
             <div>
                 <div className="imgwrapper darkimg">
-                    <Image layout="fixed" height='300' width='400' src={NewtonLogo}></Image>
+                    <Image layout="fixed" height='240' width='320' src={NewtonLogo}></Image>
                 </div>
                 <div className="showtext">
                     <div className="showtitle">Simulação Solar
@@ -60,6 +60,9 @@ function Projects() {
                     <div className="showdescription">Uma simulação da órbita dos planetas no Sistema Solar, com a física Newtoniana e visualização escrita no JavaScript.</div>
                     <div className="techused">JavaScript | p5.js</div>
                 </div>
+            </div>
+            <div className="otherprojects last">
+                <div>&#128073; Confira outros repositórios no <a href="https://github.com/schaldach" target='_blank' rel="noreferrer">meu Github</a>!</div>
             </div>
         </div>
         <a href="#contact" className="homebutton">CONTATO
