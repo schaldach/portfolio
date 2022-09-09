@@ -81,13 +81,14 @@ body, html{
   font-family: 'Raleway', sans-serif;
   text-align: center;
   color: var(--background1);
-  font-size: clamp(30px,5.5vw,100px);
+  font-size: 70px;
 }
 .description{
   text-align: left;
+  font-family: 'Raleway', sans-serif;
   font-size: 25px;
 }
-.title span{
+.title span, .description span{
   color: var(--color2);
 }
 .homebutton{
@@ -328,11 +329,12 @@ body, html{
 .contactbutton{
   font-size: 60px;
   user-select: none;
-  gap: 15px;
   display: flex;
+  white-space: nowrap;
   align-items: center;
   color: var(--color4);
   font-weight: 700;
+  gap: 5px;
   border: none;
 }
 .handanimation{
@@ -347,6 +349,7 @@ body, html{
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: center;
 }
 @keyframes wave {
   0% {
@@ -377,19 +380,43 @@ body, html{
 .responsivebr{
   display: none;
 }
+.vercel::before{
+  content: 'Portfolio powered by';
+}
+.last{
+  text-align: center;
+}
 
+@media screen and (max-width: 1024px){
+  .vercel::before{
+    content: 'Powered by';
+  }
+  .title{
+    font-size: 50px;
+  }
+}
 @media screen and (max-width: 768px){
   .showprojects>div{
     grid-template-columns: 1fr;
     place-items: center;
-    grid-template-rows: 240px 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+  }
+  .title{
+    font-size: 33px;
+  }
+  .contactbutton{
+    font-size: 40px;
+  }
+  .showprojects{
+    gap: 25px;
   }
   .about{
     grid-template-columns: 1fr;
     grid-template-rows: 300px 1px;
     place-items: center;
   }
-  .about>div:nth-child(1){
+  .about>div:nth-child(1), .imgwrapper{
     grid-row: -1;
   }
   .navbar>.vercel{
@@ -407,6 +434,10 @@ body, html{
     height: 30px;
     width: 30px;
   }
+  .contacts>div{
+    gap: 8px;
+    transform: scale(0.6);
+  }
   .showicons>a{
     width: 40px;
     height: 40px;
@@ -417,13 +448,21 @@ body, html{
   .responsivebr{
     display: block;
   }
-  .showprojects>div{
+  .showtext{
     gap: 5px;
   }
-  .showdescription{
+  .showdescription, .description{
     font-size: 18px;
   }
   .showprojects>div:not(.last){
     border-bottom: 2px solid var(--color2);
+    padding-bottom: 25px;
+  }
+  .contact{
+    font-size: 30px;
+  }
+  .homebutton{
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }

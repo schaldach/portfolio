@@ -5,7 +5,7 @@ import VercelLogo from '../public/vercellogo.png'
 function Navbar() {
     return (
         <div className="navbar">
-            <div className="vercel">Portfolio powered by<Image src={VercelLogo} layout='fixed' width='100' height='25'/></div>
+            <div className="vercel"><Image src={VercelLogo} layout='fixed' width='100' height='25'/></div>
             <a href="#"><div>HOME</div></a>
             <a href="#about"><div>SOBRE MIM</div></a>
             <a href="#projects"><div>PROJETOS</div></a>

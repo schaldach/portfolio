@@ -17,7 +17,7 @@ function Projects() {
         </div>
         <div className="showprojects">
             <div>
-                <div className="imgwrapper whiteimg">
+                <div className="imgwrapper">
                     <Image layout="fixed" height='240' width='320' src={NoltLogo}></Image>
                 </div>
                 <div className="showtext">
@@ -32,7 +32,7 @@ function Projects() {
                 </div>
             </div>
             <div>
-                <div className="imgwrapper darkimg">
+                <div className="imgwrapper">
                     <Image layout="fixed" height='240' width='320' src={PongLogo}></Image>
                 </div>
                 <div className="showtext">
@@ -47,7 +47,7 @@ function Projects() {
                 </div>
             </div>
             <div>
-                <div className="imgwrapper darkimg">
+                <div className="imgwrapper">
                     <Image layout="fixed" height='240' width='320' src={NewtonLogo}></Image>
                 </div>
                 <div className="showtext">
