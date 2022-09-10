@@ -319,15 +319,16 @@ body, html{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  font-size: 35px;
   gap: 10px;
 }
 .contactsection{
   justify-content: center;
   padding-bottom: 5vh;
+  min-height: 50vh;
 }
 .contactbutton{
-  font-size: 60px;
+  font-size: 50px;
   user-select: none;
   display: flex;
   white-space: nowrap;
@@ -386,6 +387,10 @@ body, html{
 .last{
   text-align: center;
 }
+.contacts>div>div:nth-child(1){
+  width: 40px;
+  height: 40px;
+}
 
 @media screen and (max-width: 1024px){
   .vercel::before{
@@ -435,8 +440,11 @@ body, html{
     width: 30px;
   }
   .contacts>div{
-    gap: 8px;
-    transform: scale(0.6);
+    gap: 4px;
+  }
+  .contacts>div>div:nth-child(1){
+    width: 27px;
+    height: 27px;
   }
   .showicons>a{
     width: 40px;
@@ -452,14 +460,14 @@ body, html{
     gap: 5px;
   }
   .showdescription, .description{
-    font-size: 18px;
+    font-size: 20px;
   }
   .showprojects>div:not(.last){
     border-bottom: 2px solid var(--color2);
     padding-bottom: 25px;
   }
   .contact{
-    font-size: 30px;
+    font-size: 20px;
   }
   .homebutton{
     font-size: 16px;
