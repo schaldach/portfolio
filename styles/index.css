@@ -408,7 +408,7 @@ body, html{
     gap: 15px;
   }
   .title{
-    font-size: 33px;
+    font-size: 37px;
   }
   .contactbutton{
     font-size: 40px;
@@ -439,9 +439,6 @@ body, html{
     height: 30px;
     width: 30px;
   }
-  .contacts>div{
-    gap: 4px;
-  }
   .contacts>div>div:nth-child(1){
     width: 27px;
     height: 27px;
@@ -467,7 +464,7 @@ body, html{
     padding-bottom: 25px;
   }
   .contact{
-    font-size: 20px;
+    font-size: 25px;
   }
   .homebutton{
     font-size: 16px;
