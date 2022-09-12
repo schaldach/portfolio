@@ -220,7 +220,7 @@ body, html{
 }
 .techused{
   color: var(--color2);
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .custom-shape-divider-top-1662483748 svg {
@@ -384,7 +384,7 @@ body, html{
 .vercel::before{
   content: 'Portfolio powered by';
 }
-.last{
+.centeralign{
   text-align: center;
 }
 .contacts>div>div:nth-child(1){
@@ -412,9 +412,6 @@ body, html{
   }
   .contactbutton{
     font-size: 40px;
-  }
-  .showprojects{
-    gap: 25px;
   }
   .about{
     grid-template-columns: 1fr;
@@ -464,10 +461,10 @@ body, html{
   }
   .showprojects>div:not(.last){
     border-bottom: 2px solid var(--color2);
-    padding-bottom: 25px;
+    padding-bottom: 30px;
   }
   .contact{
-    font-size: 24px;
+    font-size: 22px;
   }
   .homebutton{
     font-size: 16px;

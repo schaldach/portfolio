@@ -46,7 +46,7 @@ function Projects() {
                     <div className="techused">JavaScript | p5.js | CSS</div>
                 </div>
             </div>
-            <div>
+            <div className="last">
                 <div className="imgwrapper">
                     <Image layout="fixed" height='240' width='320' src={NewtonLogo}></Image>
                 </div>
@@ -61,7 +61,7 @@ function Projects() {
                     <div className="techused">JavaScript | p5.js</div>
                 </div>
             </div>
-            <div className="otherprojects last">
+            <div className="otherprojects last centeralign">
                 <div>&#128073; Confira outros repositórios no <a href="https://github.com/schaldach" target='_blank' rel="noreferrer">meu Github</a>!</div>
             </div>
         </div>
