@@ -15,7 +15,6 @@ function About() {
       <div className="about">
         <div>
         <div className="description">&#128073; Me chamo Gabriel Schaldach Morgado, tenho 17 anos e estou no 3° ano do Ensino Médio. </div>
-        <div className="description">&#128073; Gosto de trabalhar em projetos <span>originais</span> e com <span>personalidade</span>. </div>
         <div className="description">&#128073; Tenho experiência principalmente com CSS e JS, incluindo React.js/Next.js, no <span>Frontend</span>, e um pouco de databases Postgres e Python no <span>Backend.</span></div>
         </div>
         <Image src={Pfp} width='300' height='300' layout="fixed"></Image>
