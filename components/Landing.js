@@ -9,7 +9,7 @@ function Landing() {
           </svg>
         </div>
         <div className="home">
-        <div className="title">Olá, eu sou <br className="responsivebr"/><span>Gabriel Schaldach</span><br/> e este é o meu<br className="responsivebr"/> portfólio<br className="pcbr"/> como  <br className="responsivebr"/><span>desenvolvedor web</span>.</div>
+        <div className="title">Olá, eu sou <br className="responsivebr"/><span>Gabriel Morgado</span><br/> e este é o meu<br className="responsivebr"/> portfólio<br className="pcbr"/> como  <br className="responsivebr"/><span>desenvolvedor web</span>.</div>
         <a href="#about" className="homebutton">SOBRE MIM
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />

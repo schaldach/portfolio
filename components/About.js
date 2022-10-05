@@ -14,10 +14,14 @@ function About() {
       </div>
       <div className="about">
         <div>
-        <div className="description">&#128073; Me chamo Gabriel Schaldach Morgado, tenho 17 anos e estou no 3° ano do Ensino Médio. </div>
-        <div className="description">&#128073; Tenho experiência principalmente com CSS e JS, incluindo React.js/Next.js, no <span>Frontend</span>, e um pouco de databases Postgres e Python no <span>Backend.</span></div>
+          <div className="description">&#128073; Me chamo Gabriel Schaldach Morgado, tenho 17 anos e estou no terceiro ano do Ensino Médio. </div>
+          <div className="description">&#128073; A linguagem que eu sou mais experiente e confortável é JavaScript, principalmente no <span>Frontend</span> de sites, usando como framework Next.js.</div>
+          <div className="description">&#128073; Tenho um pouco de experiência em databases Postgres, no <span>Backend</span>, e Python, no <span>processamento de dados e imagens</span>.</div>
         </div>
-        <Image src={Pfp} width='300' height='300' layout="fixed"></Image>
+        <div className="pfpwrapper">
+          <div className="pfpborder"></div>
+          <Image src={Pfp} width='300' height='300' layout="fixed"></Image>
+        </div>
       </div>
       <a href="#projects" className="homebutton">PROJETOS
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
