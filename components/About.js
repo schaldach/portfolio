@@ -4,7 +4,7 @@ import Pfp from '../public/fotoperfil.jpg'
 function About() {
     return (
     <div className="pagesection">
-      <a className="hiddenlink" id='about'></a>
+      <a id='about'></a>
       <div className="about">
         <div>
           <div className="description">&#128073; Me chamo Gabriel Schaldach Morgado, tenho 17 anos e estou no terceiro ano do Ensino Médio. </div>
@@ -15,9 +15,6 @@ function About() {
           <div className="pfpborder"></div>
           <Image src={Pfp} width='300' height='300' layout="fixed"></Image>
         </div>
-      </div>
-      <div className="sectionbreak">
-        <div>PROJETOS</div>
       </div>
     </div>
     );

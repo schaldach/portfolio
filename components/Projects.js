@@ -58,9 +58,6 @@ function Projects() {
                 <div>&#128681; Confira outros repositórios no <a href="https://github.com/schaldach" target='_blank' rel="noreferrer">meu Github</a>!</div>
             </div>
         </div>
-        <div className="sectionbreak">
-          <div>CONTATO</div>
-        </div>
     </div>
     );
 }

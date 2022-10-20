@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&family=Raleway:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&family=Raleway:wght@300;700&family=Kaushan+Script&display=swap');
 
 :root{
   --background1: #ffffff;
@@ -11,14 +11,24 @@
 
 body, html{
   scroll-behavior: smooth;
+  scroll-padding-top: 30vh;
   margin: 0;
   padding: 0;
   background-color: var(--background1);
   font-family: 'Quicksand', sans-serif;
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--color4);
+}
+
 .navbar{
-  position: relative;
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
   background-color: var(--background1);
   font-size: 15px;
   font-weight: 700;
@@ -30,7 +40,8 @@ body, html{
 }
 
 .name{
-  font-size: 25px;
+  font-size: 30px;
+  font-family: 'Kaushan Script', cursive;
 }
 .navbar a{
   color: inherit;
@@ -39,16 +50,15 @@ body, html{
 .pagesection{
   position: relative;
   overflow: hidden;
-  padding: 0 0 2.5vh 0 ;
   background-color: var(--color4);
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   align-items: center;
+  padding: 5vh 7.5vw;
 }
 .homesection{
-  padding-top: 10vh;
+  padding-top: 20vh;
   background-color: var(--color4);
   display: grid;
   place-items: center;
@@ -94,19 +104,22 @@ body, html{
   color: var(--color1);
   font-weight: bold;
 }
-.homebutton:hover{
-  color: var(--color4);
-  box-shadow: inset 220px 0 0 0 var(--background1);
+.resume{
+  border: 2px solid var(--color1);
+  width: fit-content;
+  color: var(--color1);
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
 }
-.homebutton svg{
-  width: 20px;
-  height: 20px;
+.resume:hover{
+  background-color: var(--color1);
+  color: var(--background1);
 }
 .about{
   display: grid;
   grid-template-columns: 1fr 300px;
   align-items: center;
-  padding: 0 7.5vw;
   color: var(--background1);
   gap: 30px;
 }
@@ -147,8 +160,6 @@ body, html{
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin-top: 75px;
-  width: 90%;
 }
 .showprojects .otherprojects{
   display: flex;
@@ -223,7 +234,7 @@ body, html{
 .custom-shape-divider-bottom-1666224781 {
   position: absolute;
   z-index: 1;
-  bottom: -75px;
+  bottom: -50px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -234,7 +245,7 @@ body, html{
   position: relative;
   display: block;
   width: calc(125% + 1.3px);
-  height: 75px;
+  height: 50px;
 }
 
 .custom-shape-divider-bottom-1666224781 .shape-fill {
@@ -242,13 +253,15 @@ body, html{
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 14px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color4);
+  background: var(--background1);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--color3);
+  border-radius: 10px;
+  border: 3px solid var(--background1);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color2);
