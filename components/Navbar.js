@@ -3,12 +3,15 @@ import React from "react";
 function Navbar() {
     return (
         <div className="navbar">
-            <div className="name">Gabriel Morgado</div>
-            <a href="#"><div>0. HOME</div></a>
-            <a href="#about"><div>1. SOBRE MIM</div></a>
-            <a href="#projects"><div>2. PROJETOS</div></a>
-            <a href="#contact"><div>3. CONTATO</div></a>
-            <div className="resume">Meu currículo</div>
+            <a href="#" className="name">Gabriel Morgado</a>
+            <a href="#about"><div>SOBRE MIM</div></a>
+            <a href="#projects"><div>PROJETOS</div></a>
+            <a href="#contact"><div>CONTATO</div></a>
+            <div className="resume">Meu currículo
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+            </div>
             <div className="custom-shape-divider-bottom-1666224781">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>

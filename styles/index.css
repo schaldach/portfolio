@@ -35,7 +35,7 @@ main{
   height: 10vh;
   display: grid;
   place-items: center;
-  grid-template-columns: 1.75fr repeat(5, 1fr);
+  grid-template-columns: 3fr repeat(3, 1fr) 2fr;
   color: var(--color4);
 }
 
@@ -58,7 +58,7 @@ main{
   padding: 5vh 7.5vw;
 }
 .homesection{
-  padding-top: 20vh;
+  padding-top: calc(10vh + 50px);
   background-color: var(--color4);
   display: grid;
   place-items: center;
@@ -108,9 +108,17 @@ main{
   border: 2px solid var(--color1);
   width: fit-content;
   color: var(--color1);
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 20px;
   cursor: pointer;
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  align-items: center;
+}
+.resume svg{
+  width: 20px;
+  height: 20px;
 }
 .resume:hover{
   background-color: var(--color1);
@@ -256,12 +264,12 @@ main{
   width: 14px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--background1);
+  background: var(--color4);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--color3);
   border-radius: 10px;
-  border: 3px solid var(--background1);
+  border: 3px solid var(--color4);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color2);
@@ -281,7 +289,6 @@ main{
 .contactsection{
   justify-content: center;
   padding-bottom: 5vh;
-  min-height: 50vh;
 }
 .contactbutton{
   font-size: 50px;
@@ -299,15 +306,43 @@ main{
 }
 .contacts{
   display: flex;
-  gap: 10px;
   flex-direction: column;
-}
-.contacts>div{
-  display: flex;
   gap: 10px;
-  align-items: center;
-  justify-content: center;
 }
+.contacts svg{
+  width: 30px;
+  height: 30px;
+}
+.socialmedia{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+}
+.socialmedia>a{
+  color: var(--background1);
+  position: relative;
+  cursor: pointer;
+}
+.socialmedia>a:hover{
+  color: var(--color1);
+  animation: popup linear 0.2s;
+}
+@keyframes popup{
+  0%{
+    bottom: 0px;
+  }
+  50%{
+    bottom: 8px;
+  }
+  90%{
+    bottom: -3px;
+  }
+  100%{
+    bottom: 0px;
+  }
+}
+
 @keyframes wave {
   0% {
     transform: rotate(0deg);
@@ -342,10 +377,6 @@ main{
 }
 .centeralign{
   text-align: center;
-}
-.contacts>div>div:nth-child(1){
-  width: 40px;
-  height: 40px;
 }
 
 @media screen and (max-width: 1024px){
@@ -389,13 +420,6 @@ main{
     height: 30px;
     width: 30px;
   }
-  .contacts>div{
-    gap: 6px;
-  }
-  .contacts>div>div:nth-child(1){
-    width: 27px;
-    height: 27px;
-  }
   .showicons>a{
     width: 40px;
     height: 40px;
@@ -422,5 +446,8 @@ main{
   .homebutton{
     font-size: 16px;
     padding: 10px 20px;
+  }
+  .navbar>.name{
+    display: none;
   }
 }

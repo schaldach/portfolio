@@ -50,7 +50,7 @@ function Projects() {
                             <a href="https://algorithmsvisualized.vercel.app/" target='_blank' rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" /></svg></a>
                         </div>
                     </div>
-                    <div className="showdescription">Uma ferramenta de visualização de diferentes tipos de algoritmos usados na Ciência da Computação, tanto para Sorting como para Path Finding.</div>
+                    <div className="showdescription">Uma ferramenta de visualização de diferentes tipos de algoritmos usados na Ciência da Computação, para Sorting, Path Finding e Geração de Ruídos.</div>
                     <div className="techused">JavaScript | Next.js | React.js | CSS</div>
                 </div>
             </div>
