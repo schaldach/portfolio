@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&family=Raleway:wght@300;700&family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&family=Raleway:wght@300;700&display=swap');
 
 :root{
   --background1: #ffffff;
@@ -41,7 +41,7 @@ main{
 
 .name{
   font-size: 30px;
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Quicksand', sans-serif;
 }
 .navbar a{
   color: inherit;
@@ -62,7 +62,7 @@ main{
   background-color: var(--color4);
   display: grid;
   place-items: center;
-  min-height: 60vh;
+  min-height: 55vh;
 }
 .home{
   display: flex;
@@ -222,16 +222,15 @@ main{
   color: var(--background1);
 }
 .showicons>a{
-  background-color: var(--background1);
   display: grid;
   place-items: center;
-  color: var(--color4);
+  color: var(--background1);
   border-radius: 10px;
   height: 50px;
   width: 50px;
 }
 .showicons>a:hover{
-  background-color: var(--background2);
+  color: var(--color1);
 }
 
 .techused{
@@ -247,6 +246,41 @@ main{
   width: 100%;
   overflow: hidden;
   line-height: 0;
+}
+.imgwrapper{
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.img-squares{
+  position: absolute;
+  bottom: -24px;
+  display: flex;
+  gap: 15px;
+}
+.img-squares>div{
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  border: 1px solid var(--color1);
+}
+.right-image-arrow{
+  right: -35px;
+}
+.left-image-arrow{
+  left: -35px;
+}
+.right-image-arrow, .left-image-arrow{
+  position: absolute;
+  cursor: pointer;
+  color: var(--color1);
+}
+.right-image-arrow:hover, .left-image-arrow:hover{
+  color: var(--color2);
+}
+.right-image-arrow svg, .left-image-arrow svg{
+  width: 30px;
+  height: 30px;
 }
 
 .custom-shape-divider-bottom-1666224781 svg {
@@ -274,9 +308,6 @@ main{
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color2);
 }
-.imgwrapper{
-  filter: blur(1.5px);
-}
 .contact{
   color: var(--background1);
   display: flex;
@@ -288,7 +319,7 @@ main{
 }
 .contactsection{
   justify-content: center;
-  padding-bottom: 5vh;
+  padding-bottom: 2.5vh;
 }
 .contactbutton{
   font-size: 50px;
@@ -307,7 +338,6 @@ main{
 .contacts{
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 .contacts svg{
   width: 30px;
@@ -326,21 +356,30 @@ main{
 }
 .socialmedia>a:hover{
   color: var(--color1);
-  animation: popup linear 0.2s;
 }
-@keyframes popup{
-  0%{
-    bottom: 0px;
-  }
-  50%{
-    bottom: 8px;
-  }
-  90%{
-    bottom: -3px;
-  }
-  100%{
-    bottom: 0px;
-  }
+.copy-warning{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: fit-content;
+  left: 40px;
+}
+.copy-triangle{
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--color1);
+}
+.copy-text{
+  font-size: 14px;
+  background-color: var(--color1);
+  color: var(--background1);
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: fit-content;
 }
 
 @keyframes wave {
@@ -450,4 +489,7 @@ main{
   .navbar>.name{
     display: none;
   }
+}
+.invisible{
+  opacity: 0;
 }
