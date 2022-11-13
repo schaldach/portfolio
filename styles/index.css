@@ -30,7 +30,7 @@ main{
   z-index: 2;
   width: 100vw;
   background-color: var(--background1);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   height: 10vh;
   display: grid;
@@ -58,7 +58,7 @@ main{
   padding: 5vh 7.5vw;
 }
 .homesection{
-  padding-top: calc(10vh + 50px);
+  padding-top: calc(10vh + 40px);
   background-color: var(--color4);
   display: grid;
   place-items: center;
@@ -241,7 +241,7 @@ main{
 .custom-shape-divider-bottom-1666224781 {
   position: absolute;
   z-index: 1;
-  bottom: -50px;
+  bottom: -40px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -262,13 +262,23 @@ main{
   width: 12px;
   height: 12px;
   transform: rotate(45deg);
-  border: 1px solid var(--color1);
+  cursor: pointer;
+  border: 2px solid var(--color1);
+}
+.img-squares>div:hover{
+  border: 2px solid var(--color3);
+}
+.filled{
+  background-color: var(--color1);
+}
+.filled:hover{
+  background-color: var(--color3);
 }
 .right-image-arrow{
-  right: -25px;
+  right: -30px;
 }
 .left-image-arrow{
-  left: -25px;
+  left: -30px;
 }
 .right-image-arrow, .left-image-arrow{
   position: absolute;
@@ -276,7 +286,7 @@ main{
   color: var(--color1);
 }
 .right-image-arrow:hover, .left-image-arrow:hover{
-  color: var(--color2);
+  color: var(--color3);
 }
 .right-image-arrow svg, .left-image-arrow svg{
   width: 30px;
@@ -287,7 +297,7 @@ main{
   position: relative;
   display: block;
   width: calc(125% + 1.3px);
-  height: 50px;
+  height: 40px;
 }
 
 .custom-shape-divider-bottom-1666224781 .shape-fill {
@@ -349,13 +359,28 @@ main{
   display: flex;
   gap: 15px;
 }
-.socialmedia>a{
+.socialmedia>div{
+  position: relative;
+}
+.hoverbar{
+  position: absolute;
+  background-color: var(--color1);
+  top: 36px;
+  width: 30px;
+}
+.socialmedia>div:hover .hoverbar{
+  height: 2px;
+}
+.socialmedia>div>a{
   color: var(--background1);
   position: relative;
   cursor: pointer;
+  bottom: 0px;
+  transition: all 0.25s;
 }
-.socialmedia>a:hover{
+.socialmedia>div>a:hover{
   color: var(--color1);
+  bottom: 5px;
 }
 .copy-warning{
   display: flex;
@@ -447,8 +472,11 @@ main{
     grid-row: -1;
   }
   .navbar{
-    grid-template-columns: repeat(4, 1fr);
-    font-size: 12px;
+    grid-template-columns: repeat(3, 1fr) 1.5fr;
+    font-size: 14px;
+  }
+  .resume{
+    font-size: 14px;
   }
   .showtitle{
     font-size: 30px;
@@ -473,10 +501,6 @@ main{
   }
   .showdescription, .description{
     font-size: 20px;
-  }
-  .showprojects>div:not(.last){
-    border-bottom: 2px solid var(--color2);
-    padding-bottom: 30px;
   }
   .contact{
     font-size: 22px;

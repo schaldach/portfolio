@@ -15,7 +15,7 @@ function Project({title, description, tech, images, github, url}) {
                 <div className='right-image-arrow' onClick={() => {if(currentImage<images.length-1){changeImage(currentImage+1)}}}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg></div>
                 <div className='img-squares'>
                 {images.map((img, index) =>
-                    <div key={index} style={{background:index===currentImage?'var(--color1)':'var(--color4)'}}></div>
+                    <div onClick={() => changeImage(index)} key={index} className={index===currentImage?'filled':''}></div>
                 )}
                 </div>
             </div>
