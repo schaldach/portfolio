@@ -42,18 +42,24 @@ main{
 .name{
   font-size: 30px;
   font-family: 'Quicksand', sans-serif;
+  box-shadow: 0px 42px inset var(--background1), 0px 0px inset var(--color1);;
+  color: inherit;
+  padding: 3px 0px;
+}
+.name:hover{
+  box-shadow: 0px 42px inset var(--background1), 255px 0px inset var(--color1);
 }
 
 .navbar a{
-  color: inherit;
   text-decoration: none;
   transition: box-shadow 0.6s;
+}
+.navbar a:not(.normal-anchor){
+  box-shadow: 0px 24px inset var(--background1), 0px 0px inset var(--color1);
+  color: inherit;
   padding: 3px 0px;
 }
-.navbar a:not(.navbar a:nth-child(1)){
-  box-shadow: 0px 24px inset var(--background1), 0px 0px inset var(--color1);
-}
-.navbar a:not(.navbar a:nth-child(1)):hover{
+.navbar a:not(.normal-anchor):hover{
   box-shadow: 0px 24px inset var(--background1), 80px 0px inset var(--color1);
 }
 .pagesection{
