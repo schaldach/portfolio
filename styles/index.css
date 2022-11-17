@@ -379,6 +379,7 @@ main{
 }
 .hoverbar{
   position: absolute;
+  pointer-events: none;
   background-color: var(--color1);
   top: 36px;
   width: 30px;
@@ -391,7 +392,7 @@ main{
   position: relative;
   cursor: pointer;
   bottom: 0px;
-  transition: all 0.25s;
+  transition: bottom 0.25s;
 }
 .socialmedia>div>a:hover{
   color: var(--color1);
