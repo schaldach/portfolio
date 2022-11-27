@@ -394,9 +394,9 @@ main{
   bottom: 0px;
   transition: bottom 0.25s;
 }
-.socialmedia>div>a:hover{
+.socialmedia>div:hover>a{
   color: var(--color1);
-  bottom: 5px;
+  bottom: 4px;
 }
 .copy-warning{
   display: flex;
