@@ -33,7 +33,7 @@ main {
   z-index: 0;
   height: calc(100vh + 60px);
   width: 100vw;
-  transition: all 0.1s linear;
+  transition: all 0.2s linear;
 }
 .navbar {
   display: flex;
@@ -42,7 +42,7 @@ main {
 }
 
 .navbar>div:hover ~ .background-img{
-  transform: scale(1.075);
+  transform: scale(1.1);
 }
 .navbar>div:nth-child(1):hover ~ .background-img {
   top: 0px;
@@ -492,7 +492,7 @@ main {
     gap: 15px;
   }
   .title {
-    font-size: 37px;
+    font-size: 36px;
   }
   .contactbutton {
     font-size: 40px;
@@ -543,6 +543,9 @@ main {
   }
   .showtitle{
     justify-content: center;
+  }
+  .showtitle{
+    text-align: center;
   }
 }
 .invisible {

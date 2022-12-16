@@ -7,9 +7,9 @@ function About() {
       <a id='about'></a>
       <div className="about">
         <div>
-          <div className="description">&#128073; Me chamo Gabriel Schaldach Morgado, tenho 18 anos e estou no terceiro ano do Ensino Médio. </div>
-          <div className="description">&#128073; A linguagem que eu sou mais experiente e confortável é JavaScript, principalmente no <span>Frontend</span> de sites, usando Next/React como frameworks.</div>
-          <div className="description">&#128073; Tenho um pouco de experiência em databases Postgres, no <span>Backend</span>, e Python, no <span>processamento de dados e imagens</span>.</div>
+          <div className="description">&#128073; Me chamo Gabriel Schaldach Morgado, tenho 18 anos e atualmente sou formado no Ensino Médio. </div>
+          <div className="description">&#128073; A linguagem que eu sou mais experiente e confortável é JavaScript, principalmente no <span>Frontend</span> de sites, usando Next/React como frameworks. </div>
+          <div className="description">&#128073; Tenho um pouco de experiência também no <span>Backend</span>, onde já utilizei a plataforma Supabase e aprendi alguns conceitos fundamentais sobre databases, e Python, no processamento de dados e imagens.</div>
         </div>
         <div className="pfpwrapper">
           <div className="pfpborder"></div>
