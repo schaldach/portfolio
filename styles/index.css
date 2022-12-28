@@ -58,7 +58,6 @@ main {
 }
 .navbar > div {
   z-index: 1;
-  cursor: pointer;
   height: 60px;
   width: fit-content;
   display: flex;
@@ -70,6 +69,7 @@ main {
 .navbar > div :hover {
   font-size: 45px;
   color: var(--color2);
+  cursor: pointer;
 }
 .navbar a {
   text-decoration: none;
@@ -127,7 +127,7 @@ main {
   color: var(--color1);
   font-weight: bold;
 }
-.resume {
+.navbar .resume {
   border: 2px solid var(--color1);
   width: fit-content;
   color: var(--color1);
