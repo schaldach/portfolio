@@ -3,10 +3,9 @@
 :root {
   --background1: #ffffff;
   --background2: #dee2e6;
-  --color1: #00aead;
-  --color2: #1e88e5;
-  --color3: #0d47a1;
-  --color4: #151019;
+  --color1: #1e88e5;
+  --color2: #0d47a1;
+  --color3: #151019;
 }
 
 body,
@@ -23,7 +22,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background-color: var(--color4);
+  background-color: var(--color3);
 }
 
 .background-img {
@@ -68,7 +67,7 @@ main {
 }
 .navbar > div :hover {
   font-size: 45px;
-  color: var(--color2);
+  color: var(--color1);
   cursor: pointer;
 }
 .navbar a {
@@ -78,7 +77,7 @@ main {
 .pagesection {
   position: relative;
   overflow: hidden;
-  background-color: var(--color4);
+  background-color: var(--color3);
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -106,7 +105,7 @@ main {
 }
 .title span,
 .description span {
-  color: var(--color2);
+  color: var(--color1);
 }
 .sectionbreak {
   width: 100%;
@@ -120,7 +119,7 @@ main {
 .sectionbreak > div {
   width: fit-content;
   padding: 0px 20px;
-  background-color: var(--color4);
+  background-color: var(--color3);
   font-size: 24px;
   top: -12px;
   position: relative;
@@ -136,6 +135,7 @@ main {
   border-radius: 20px;
   cursor: pointer;
   display: flex;
+  font-weight: 700;
   gap: 10px;
   font-size: 20px;
   margin-top: 25px;
@@ -149,6 +149,7 @@ main {
 .resume:hover {
   background-color: var(--color1);
   color: var(--background1);
+  border: 2px solid var(--color1);
 }
 .about {
   display: grid;
@@ -168,7 +169,7 @@ main {
 }
 .pfpborder {
   position: absolute;
-  border: 5px solid var(--color4);
+  border: 5px solid var(--color3);
   border-top: 5px solid var(--color1);
   border-bottom: 5px solid var(--color1);
   border-radius: 50%;
@@ -202,11 +203,11 @@ main {
   color: var(--background1);
 }
 .otherprojects a {
-  color: var(--color2);
+  color: var(--color1);
   text-decoration: none;
 }
 .otherprojects a:hover {
-  color: var(--color3);
+  color: var(--color2);
 }
 .showprojects > div {
   width: fit-content;
@@ -217,7 +218,7 @@ main {
   position: relative;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--color4);
+  border: 2px solid var(--color3);
 }
 .showprojects svg {
   height: 40px;
@@ -235,7 +236,7 @@ main {
   font-family: "Raleway", sans-serif;
   display: flex;
   gap: 20px;
-  color: var(--color2);
+  color: var(--color1);
   align-items: center;
 }
 .showtext {
@@ -260,19 +261,42 @@ main {
 }
 
 .techused {
-  color: var(--color2);
+  color: var(--color1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   font-size: 20px;
 }
-
-.custom-shape-divider-bottom-1666224781 {
-  position: absolute;
-  z-index: 1;
-  bottom: -40px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
+.techused>div{
+  padding: 6px 12px;
+  border-radius: 30px;
+  border: 2px solid;
 }
+.jscard{
+  border-color: #f5d106;
+  color: #f5d106;
+}
+.csscard{
+  border-color: #0d47a1;
+  color: #0d47a1;
+}
+.nextcard{
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.p5card{
+  border-color: #f50656;
+  color: #f50656;
+}
+.reactcard{
+  border-color: #1e6adb;
+  color: #1e6adb;
+}
+.supabasecard{
+  border-color: #12d84d;
+  color: #12d84d;
+}
+
 .imgwrapper {
   position: relative;
   display: grid;
@@ -292,13 +316,13 @@ main {
   border: 2px solid var(--color1);
 }
 .img-squares > div:hover {
-  border: 2px solid var(--color3);
+  border: 2px solid var(--color2);
 }
 .filled {
   background-color: var(--color1);
 }
 .filled:hover {
-  background-color: var(--color3);
+  background-color: var(--color2);
 }
 .right-image-arrow {
   right: -30px;
@@ -314,7 +338,7 @@ main {
 }
 .right-image-arrow:hover,
 .left-image-arrow:hover {
-  color: var(--color3);
+  color: var(--color2);
 }
 .right-image-arrow svg,
 .left-image-arrow svg {
@@ -322,30 +346,19 @@ main {
   height: 30px;
 }
 
-.custom-shape-divider-bottom-1666224781 svg {
-  position: relative;
-  display: block;
-  width: calc(125% + 1.3px);
-  height: 40px;
-}
-
-.custom-shape-divider-bottom-1666224781 .shape-fill {
-  fill: #ffffff;
-}
-
 ::-webkit-scrollbar {
   width: 14px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color4);
+  background: var(--color3);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color3);
+  background: var(--color2);
   border-radius: 10px;
-  border: 3px solid var(--color4);
+  border: 3px solid var(--color3);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color2);
+  background: var(--color1);
 }
 .contact {
   color: var(--background1);

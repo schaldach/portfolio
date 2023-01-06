@@ -3,6 +3,14 @@ import Image from 'next/image';
 
 function Project({title, description, tech, images, github, url}) {
     const [currentImage, changeImage] = useState(0)
+    const techclasses = {
+        JavaScript: 'jscard',
+        p5: 'p5card',
+        Supabase: 'supabasecard',
+        CSS: 'csscard',
+        React: 'reactcard',
+        Next: 'nextcard',
+    }
     return (
         <div>
             <div className="imgwrapper">
@@ -27,7 +35,11 @@ function Project({title, description, tech, images, github, url}) {
                     </div>
                 </div>
                 <div className="showdescription">{description}</div>
-                <div className="techused">{tech}</div>
+                <div className="techused">
+                    {tech.map((language) => 
+                        <div className={techclasses[language]}>{language}</div>
+                    )}
+                </div>
                 </div>
         </div>
     );
