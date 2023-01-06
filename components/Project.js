@@ -36,8 +36,8 @@ function Project({title, description, tech, images, github, url}) {
                 </div>
                 <div className="showdescription">{description}</div>
                 <div className="techused">
-                    {tech.map((language) => 
-                        <div className={techclasses[language]}>{language}</div>
+                    {tech.map((language, index) => 
+                        <div key={index} className={techclasses[language]}>{language}</div>
                     )}
                 </div>
                 </div>
