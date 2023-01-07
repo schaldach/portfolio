@@ -325,10 +325,10 @@ main {
   background-color: var(--color2);
 }
 .right-image-arrow {
-  right: -30px;
+  right: -34px;
 }
 .left-image-arrow {
-  left: -30px;
+  left: -34px;
 }
 .right-image-arrow,
 .left-image-arrow {
