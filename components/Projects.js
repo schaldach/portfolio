@@ -6,7 +6,7 @@ function Projects() {
         <div className="pagesection">
             <a id='projects'></a>
             <div className="showprojects">
-                <Project title='Nolt' description='O Nolt é um site com o objetivo de organizar todas as anotações e lembretes pessoais em somente um lugar. Ele possui um sistema de autenticação e armazenamento de dados com Supabase, e o Frontend com Next.js.' tech={['JavaScript', 'Next', 'Supabase', 'React', 'CSS']} github='https://github.com/schaldach/nolt' url='https://nolt-opal.vercel.app/'
+                <Project title='Nolt' description='O Nolt é um site com o objetivo de organizar todas as anotações e lembretes pessoais em somente um lugar. Ele possui um sistema de autenticação e database com Supabase, e o Frontend com Next.js.' tech={['JavaScript', 'Next', 'Supabase', 'React', 'CSS']} github='https://github.com/schaldach/nolt' url='https://nolt-opal.vercel.app/'
                     images={['/nolt1.png', '/nolt2.png', '/nolt3.png', '/nolt4.png', '/nolt5.png', '/nolt6.png']} />
                 <Project title='Pong do Morgs' description='O Pong do Morgs é uma releitura do jogo Pong, com a principal mecânica única de powerups &#40;18 ao total&#41;. Eles são coletados pelos jogadores durante a partida e fazem cada rodada da partida única.' tech={['JavaScript', 'p5', 'CSS']} github='https://github.com/schaldach/pong-do-morgs' url='https://schaldach.github.io/pong-do-morgs'
                     images={['/pong1.png', '/pong2.png', '/pong3.png', '/pong4.png']} />

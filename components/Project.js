@@ -19,8 +19,8 @@ function Project({ title, description, tech, images, github, url }) {
                         {index === currentImage ? <img className='projectimage' src={img} /> : <></>}
                     </div>
                 )}
-                <div className='left-image-arrow' onClick={() => { if (currentImage > 0) { changeImage(currentImage - 1) } }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg></div>
-                <div className='right-image-arrow' onClick={() => { if (currentImage < images.length - 1) { changeImage(currentImage + 1) } }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg></div>
+                <div className='left-image-arrow' onClick={() => { if (currentImage > 0) { changeImage(currentImage - 1) } else { changeImage(images.length - 1) } }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg></div>
+                <div className='right-image-arrow' onClick={() => { if (currentImage < images.length - 1) { changeImage(currentImage + 1) } else { changeImage(0) } }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg></div>
                 <div className='img-squares'>
                     {images.map((img, index) =>
                         <div onClick={() => changeImage(index)} key={index} className={index === currentImage ? 'filled' : ''}></div>

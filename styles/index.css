@@ -192,10 +192,11 @@ main {
 }
 .project{
   background-color: rgba(13, 71, 161, 0.3);
-  padding: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
   border-radius: 25px;
-  width: 100%;
   height: fit-content;
+  grid-template-rows: 270px;
   display: grid;
   grid-template-columns: 480px 1fr;
   gap: 40px;
@@ -205,14 +206,13 @@ main {
 .projectimage{
   height: 270px; 
   width: 480px;
-  border: 2px solid var(--color1);
   box-sizing: border-box 
 }
 .showprojects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 .showprojects .otherprojects {
   text-align: center;
@@ -239,7 +239,7 @@ main {
 }
 .showtitle {
   width: 100%;
-  font-size: 50px;
+  font-size: 38px;
   font-family: "Raleway", sans-serif;
   display: flex;
   gap: 20px;
@@ -249,7 +249,8 @@ main {
 .showtext {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  padding: 0px 10px;
 }
 .showdescription {
   font-size: 25px;
@@ -260,8 +261,8 @@ main {
   place-items: center;
   color: var(--background1);
   border-radius: 10px;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 }
 .showicons > a:hover {
   color: var(--color1);
@@ -320,16 +321,16 @@ main {
   height: 12px;
   transform: rotate(45deg);
   cursor: pointer;
-  border: 2px solid var(--color1);
+  border: 2px solid #f5d106;
 }
 .img-squares > div:hover {
-  border: 2px solid var(--color2);
+  border: 2px solid #caad0a;
 }
 .filled {
-  background-color: var(--color1);
+  background-color: #f5d106;
 }
 .filled:hover {
-  background-color: var(--color2);
+  background-color: #caad0a;
 }
 .right-image-arrow {
   right: 0px;
@@ -341,11 +342,11 @@ main {
 .left-image-arrow {
   position: absolute;
   cursor: pointer;
-  color: var(--color1);
+  color: #f5d106;
 }
 .right-image-arrow:hover,
 .left-image-arrow:hover {
-  color: var(--color2);
+  color: #caad0a;
 }
 .right-image-arrow svg,
 .left-image-arrow svg {
@@ -510,13 +511,12 @@ main {
   .projectimage{
     width: 320px;
     height: 180px;
-    grid-row: 2;
   }
   .project{
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    padding: 20px 10px;
-    gap: 10px;
+    grid-template-columns: 320px;
+    grid-template-rows: 1fr 180px;
+    padding-top: 10px;
+    gap: 15px;
   }
   .showicons{
     gap: 10px;
@@ -525,7 +525,7 @@ main {
     justify-content: center;
   }
   .title {
-    font-size: 36px;
+    font-size:36px;
   }
   .contactbutton {
     font-size: 40px;
@@ -537,7 +537,7 @@ main {
   }
   .about > div:nth-child(1),
   .imgwrapper {
-    grid-row: -1;
+    grid-row: 2;
   }
   .navbar {
     grid-template-columns: repeat(3, 1fr) 1.5fr;
@@ -566,6 +566,7 @@ main {
   }
   .showtext {
     gap: 10px;
+    grid-row: 1;
   }
   .showdescription,
   .description {
@@ -584,3 +585,4 @@ main {
 .invisible {
   opacity: 0;
 }
+.img-squares{}
