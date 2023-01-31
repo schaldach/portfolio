@@ -509,12 +509,12 @@ main {
 }
 @media screen and (max-width: 768px) {
   .projectimage{
-    width: 320px;
-    height: 180px;
+    width: 100%;
+    height: auto;
   }
   .project{
-    grid-template-columns: 320px;
-    grid-template-rows: 1fr 180px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
     padding-top: 10px;
     gap: 15px;
   }
@@ -532,7 +532,7 @@ main {
   }
   .about {
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 1px;
+    grid-template-rows: 300px 1fr;
     place-items: center;
   }
   .about > div:nth-child(1),
