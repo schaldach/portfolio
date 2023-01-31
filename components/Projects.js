@@ -14,7 +14,7 @@ function Projects() {
                     images={['/algoritmo1.png', '/algoritmo2.png', '/algoritmo3.png', '/algoritmo4.png', '/algoritmo5.png', '/algoritmo6.png', '/algoritmo7.png']} />
                 <Project title='Escala do Universo' description='Um site para a visualização da escala do universo, comparando lado a lado corpos de tamanhos próximos, começando com o planeta Terra até o Universo Observável.' tech={['JavaScript', 'Next', 'React', 'CSS']} github='https://github.com/schaldach/universescale' url='https://universescale.vercel.app/'
                     images={['/universo1.png', '/universo2.png', '/universo3.png', '/universo4.png', '/universo5.png']} />
-                <div className="otherprojects last">&#128681; Confira outros repositórios no <a href="https://github.com/schaldach" target='_blank' rel="noreferrer">meu Github</a>!
+                <div className="otherprojects last">&#128681; Confira outros repositórios <br className="responsivebr" />no <a href="https://github.com/schaldach" target='_blank' rel="noreferrer">meu Github</a>!
                 </div>
             </div>
         </div>
