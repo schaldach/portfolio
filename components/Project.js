@@ -12,11 +12,11 @@ function Project({ title, description, tech, images, github, url }) {
         Next: 'nextcard',
     }
     return (
-        <div>
+        <div className='project'>
             <div className="imgwrapper">
                 {images.map((img, index) =>
                     <div key={index}>
-                        {index === currentImage ? <img style={{ height: '180px', width: '320px', border: '2px solid var(--color1)', boxSizing: 'border-box' }} src={img} /> : <></>}
+                        {index === currentImage ? <img className='projectimage' src={img} /> : <></>}
                     </div>
                 )}
                 <div className='left-image-arrow' onClick={() => { if (currentImage > 0) { changeImage(currentImage - 1) } }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg></div>

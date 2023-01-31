@@ -190,14 +190,32 @@ main {
     transform: rotate(360deg);
   }
 }
+.project{
+  background-color: rgba(13, 71, 161, 0.3);
+  padding: 30px;
+  border-radius: 25px;
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 40px;
+  position: relative;
+  place-items: center;
+}
+.projectimage{
+  height: 270px; 
+  width: 480px;
+  border: 2px solid var(--color1);
+  box-sizing: border-box 
+}
 .showprojects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 10px;
 }
 .showprojects .otherprojects {
-  display: flex;
+  text-align: center;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   color: var(--background1);
@@ -208,17 +226,6 @@ main {
 }
 .otherprojects a:hover {
   color: var(--color2);
-}
-.showprojects > div {
-  width: fit-content;
-  height: fit-content;
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 40px;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid var(--color3);
 }
 .showprojects svg {
   height: 40px;
@@ -242,7 +249,7 @@ main {
 .showtext {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 .showdescription {
   font-size: 25px;
@@ -304,7 +311,7 @@ main {
 }
 .img-squares {
   position: absolute;
-  bottom: -24px;
+  bottom: 20px;
   display: flex;
   gap: 15px;
 }
@@ -325,10 +332,10 @@ main {
   background-color: var(--color2);
 }
 .right-image-arrow {
-  right: -34px;
+  right: 0px;
 }
 .left-image-arrow {
-  left: -34px;
+  left: 0px;
 }
 .right-image-arrow,
 .left-image-arrow {
@@ -500,11 +507,22 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
-  .showprojects > div {
+  .projectimage{
+    width: 320px;
+    height: 180px;
+    grid-row: 2;
+  }
+  .project{
     grid-template-columns: 1fr;
-    place-items: center;
-    grid-template-rows: 1fr;
-    gap: 15px;
+    grid-template-rows: auto auto;
+    padding: 20px 10px;
+    gap: 10px;
+  }
+  .showicons{
+    gap: 10px;
+  }
+  .techused{
+    justify-content: center;
   }
   .title {
     font-size: 36px;
@@ -537,8 +555,8 @@ main {
     width: 30px;
   }
   .showicons > a {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
   .pcbr {
     display: none;
@@ -547,7 +565,7 @@ main {
     display: block;
   }
   .showtext {
-    gap: 5px;
+    gap: 10px;
   }
   .showdescription,
   .description {
