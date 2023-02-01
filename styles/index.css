@@ -508,6 +508,9 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
+  .pagesection{
+    padding: 5vh 4vw;
+  }
   .projectimage{
     width: 100%;
     height: auto;
