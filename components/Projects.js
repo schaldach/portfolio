@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import Project from "./Project";
 
+const content = {
+    'pt-BR': [
+        ''
+    ],
+    'en-US': [
+        ''
+    ]
+}
+
 function Projects() {
     return (
         <div className="pagesection">

@@ -3,18 +3,45 @@ import Contact from '../components/Contact'
 import Projects from "../components/Projects";
 import Landing from "../components/Landing";
 import SectionBreak from "../components/SectionBreak";
+import LangChange from "../components/LangChange";
+import { useEffect, useState } from "react";
+import Professional from "../components/Professional";
+import { useRouter } from "next/router";
+const titles = {
+  'pt-BR': [
+    'Sobre mim',
+    'Experiência profissional',
+    'Projetos pessoais',
+    'Contato'
+  ],
+  'en-US': [
+    'About me',
+    'Professional Experience',
+    'Side projects',
+    'Contact'
+  ]
+}
 
 function LandingPage() {
+  const { locale, locales, defaultLocale } = useRouter();
+  const [lang, setLang] = useState('pt-BR')
+  console.log(locale, locales, defaultLocale);
+  useEffect(() => {
+    setLang(locale)
+  }, [])
   return (
-  <>
-    <Landing/>
-    <SectionBreak section='Sobre mim'/>
-    <About/>
-    <SectionBreak section='Projetos'/>
-    <Projects/>
-    <SectionBreak section='Contato'/>
-    <Contact/>
-  </>
+    <>
+      <LangChange lang={lang} setLang={setLang} />
+      <Landing lang={lang} />
+      <SectionBreak section={titles[lang][0]} />
+      <About lang={lang} />
+      <SectionBreak section={titles[lang][1]} />
+      <Professional lang={lang}/>
+      <SectionBreak section={titles[lang][2]} />
+      <Projects lang={lang} />
+      <SectionBreak section={titles[lang][3]} />
+      <Contact lang={lang} />
+    </>
   );
 }
 

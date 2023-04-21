@@ -4,12 +4,12 @@ import Image from 'next/image';
 function Project({ title, description, tech, images, github, url }) {
     const [currentImage, changeImage] = useState(0)
     const techclasses = {
-        JavaScript: 'jscard',
-        p5: 'p5card',
-        Supabase: 'supabasecard',
-        CSS: 'csscard',
-        React: 'reactcard',
-        Next: 'nextcard',
+        'JavaScript': 'jscard',
+        'p5': 'p5card',
+        'Supabase': 'supabasecard',
+        'CSS': 'csscard',
+        'React': 'reactcard',
+        'Next': 'nextcard',
     }
     return (
         <div className='project'>

@@ -6,6 +6,7 @@
   --color1: #1e88e5;
   --color2: #0d47a1;
   --color3: #151019;
+  --color4: #262b46;
 }
 
 body,
@@ -30,7 +31,7 @@ main {
   top: 0px;
   left: 0px;
   z-index: 0;
-  height: calc(100vh + 60px);
+  height: calc(100vh + 80px);
   width: 100vw;
   transition: all 0.2s linear;
 }
@@ -55,18 +56,21 @@ main {
 .navbar>div:nth-child(4):hover ~ .background-img {
   top: -60px;
 }
+.navbar>div:nth-child(5):hover ~ .background-img {
+  top: -80px;
+}
 .navbar > div {
   z-index: 1;
-  height: 60px;
+  height: 50px;
   width: fit-content;
   display: flex;
   align-items: center;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 28px;
   color: var(--background1);
 }
 .navbar > div :hover {
-  font-size: 45px;
+  font-size: 32px;
   color: var(--color1);
   cursor: pointer;
 }
@@ -82,12 +86,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5vh 7.5vw;
+  padding: 5vh 5vw;
 }
 .homesection {
   display: grid;
   place-items: center;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: 0.6fr 1fr;
   box-sizing: border-box;
   min-height: 100vh;
 }
@@ -196,7 +200,7 @@ main {
   overflow: hidden;
   border-radius: 25px;
   height: fit-content;
-  grid-template-rows: 270px;
+  grid-template-rows: 285px;
   display: grid;
   grid-template-columns: 480px 1fr;
   gap: 40px;
@@ -204,7 +208,7 @@ main {
   place-items: center;
 }
 .projectimage{
-  height: 270px; 
+  height: 285px; 
   width: 480px;
   box-sizing: border-box 
 }
@@ -304,7 +308,14 @@ main {
   border-color: #12d84d;
   color: #12d84d;
 }
-
+.threecard{
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.firebasecard{
+  border-color: #f83f06;
+  color: #f83f06;
+}
 .imgwrapper {
   position: relative;
   display: grid;
@@ -590,4 +601,29 @@ main {
 }
 .invisible {
   opacity: 0;
+}
+.flags{
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.flags>div{
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 15px;
+  padding: 10px;
+}
+.flags>div:hover, .selected-flag{
+  background-color: rgba(13, 71, 161,0.5);
+}
+.flags svg{
+  width: 42px;
+  height: 28px;
 }
