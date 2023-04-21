@@ -23,12 +23,12 @@ const titles = {
 }
 
 function LandingPage() {
-  const { locale, locales, defaultLocale } = useRouter();
+  const { locale } = useRouter();
   const [lang, setLang] = useState('pt-BR')
-  console.log(locale, locales, defaultLocale);
   useEffect(() => {
     setLang(locale)
   }, [])
+  
   return (
     <>
       <LangChange lang={lang} setLang={setLang} />
