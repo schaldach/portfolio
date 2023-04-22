@@ -2,10 +2,10 @@ import Company from "./Company";
 
 const content = {
     'pt-BR': [
-        'Atuei como desenvolvedor Web Fullstack Júnior na Webphy, desenvolvendo algoritmos, protótipos, demonstrações e sites que agregassem com a inteligência artificial desenvolvida na empresa, voltada para a visão computacional e a digitalização do mundo físico.'
+        'Atuei como desenvolvedor Web Full Stack Júnior na Webphy, desenvolvendo algoritmos, protótipos, demonstrações e sites que atuassem junto à inteligência artificial desenvolvida na empresa, voltada para a visão computacional e a digitalização do mundo físico.'
     ],
     'en-US': [
-        'I worked as a Junior Fullstack Web developer at Webphy, developing algorithms, prototypes, demos and websites that aggregated with the artificial intelligence created at the company, focused on computational vision and digitalization of the material world.'
+        'I worked as a Junior Full Stack Web developer at Webphy, developing algorithms, prototypes, demos and websites that operated alongside the artificial intelligence developed at the company, focused on computational vision and digitalization of the material world.'
     ]
 }
 
