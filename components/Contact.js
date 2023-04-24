@@ -6,7 +6,7 @@ const content = {
     'Usuário copiado!'
   ],
   'en-US': [
-    'Say hello!',
+    'Get in touch!',
     'User copied!'
   ]
 }
