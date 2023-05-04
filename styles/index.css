@@ -26,39 +26,12 @@ main {
   background-color: var(--color3);
 }
 
-.background-img {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 0;
-  height: calc(100vh + 80px);
-  width: 100vw;
-  transition: all 0.2s linear;
-}
 .navbar {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.navbar > div:hover ~ .background-img {
-  transform: scale(1.1);
-}
-.navbar > div:nth-child(1):hover ~ .background-img {
-  top: 0px;
-}
-.navbar > div:nth-child(2):hover ~ .background-img {
-  top: -20px;
-}
-.navbar > div:nth-child(3):hover ~ .background-img {
-  top: -40px;
-}
-.navbar > div:nth-child(4):hover ~ .background-img {
-  top: -60px;
-}
-.navbar > div:nth-child(5):hover ~ .background-img {
-  top: -80px;
-}
 .navbar > div {
   z-index: 1;
   height: 50px;
@@ -503,12 +476,7 @@ main {
 @media screen and (max-width: 1024px) {
   .homesection {
     grid-template-columns: 1fr;
-    grid-template-rows: 50vh 50vh;
     padding: 0;
-  }
-  .background-img {
-    height: 150vh;
-    width: 300vh;
   }
   .navbar {
     grid-row: 2;
@@ -553,11 +521,9 @@ main {
   .imgwrapper {
     grid-row: 2;
   }
-  .navbar {
-    grid-template-columns: repeat(3, 1fr) 1.5fr;
-  }
   .navbar > div {
     font-size: 23px;
+    height: 45px;
   }
   .navbar > div :hover {
     font-size: 23px;
