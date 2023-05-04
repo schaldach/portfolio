@@ -5,7 +5,7 @@
   --background2: #dee2e6;
   --color1: #1e88e5;
   --color2: #0d47a1;
-  --color3: #151019;
+  --color3: #0d090f;
   --color4: #262b46;
 }
 
@@ -41,22 +41,22 @@ main {
   width: 100%;
 }
 
-.navbar>div:hover ~ .background-img{
+.navbar > div:hover ~ .background-img {
   transform: scale(1.1);
 }
-.navbar>div:nth-child(1):hover ~ .background-img {
+.navbar > div:nth-child(1):hover ~ .background-img {
   top: 0px;
 }
-.navbar>div:nth-child(2):hover ~ .background-img {
+.navbar > div:nth-child(2):hover ~ .background-img {
   top: -20px;
 }
-.navbar>div:nth-child(3):hover ~ .background-img {
+.navbar > div:nth-child(3):hover ~ .background-img {
   top: -40px;
 }
-.navbar>div:nth-child(4):hover ~ .background-img {
+.navbar > div:nth-child(4):hover ~ .background-img {
   top: -60px;
 }
-.navbar>div:nth-child(5):hover ~ .background-img {
+.navbar > div:nth-child(5):hover ~ .background-img {
   top: -80px;
 }
 .navbar > div {
@@ -118,7 +118,6 @@ main {
   background-color: var(--color1);
   display: grid;
   place-items: center;
-  font-size: 25px;
 }
 .sectionbreak > div {
   width: fit-content;
@@ -194,7 +193,7 @@ main {
     transform: rotate(360deg);
   }
 }
-.project{
+.project {
   background-color: rgba(13, 71, 161, 0.3);
   box-sizing: border-box;
   overflow: hidden;
@@ -207,10 +206,10 @@ main {
   position: relative;
   place-items: center;
 }
-.projectimage{
-  height: 285px; 
+.projectimage {
+  height: 285px;
   width: 480px;
-  box-sizing: border-box 
+  box-sizing: border-box;
 }
 .showprojects {
   display: flex;
@@ -279,40 +278,40 @@ main {
   gap: 10px;
   font-size: 20px;
 }
-.techused>div{
+.techused > div {
   padding: 6px 12px;
   border-radius: 30px;
   border: 2px solid;
 }
-.jscard{
+.jscard {
   border-color: #f5d106;
   color: #f5d106;
 }
-.csscard{
+.csscard {
   border-color: #1458bd;
   color: #1458bd;
 }
-.nextcard{
+.nextcard {
   border-color: #ffffff;
   color: #ffffff;
 }
-.p5card{
+.p5card {
   border-color: #f50656;
   color: #f50656;
 }
-.reactcard{
+.reactcard {
   border-color: #4791ff;
   color: #4791ff;
 }
-.supabasecard{
+.supabasecard {
   border-color: #12d84d;
   color: #12d84d;
 }
-.threecard{
+.threecard {
   border-color: #ffffff;
   color: #ffffff;
 }
-.firebasecard{
+.firebasecard {
   border-color: #f83f06;
   color: #f83f06;
 }
@@ -502,15 +501,16 @@ main {
   margin-top: 25px;
 }
 @media screen and (max-width: 1024px) {
-  .homesection{
+  .homesection {
     grid-template-columns: 1fr;
-    grid-template-rows: 60vh 60vh;
+    grid-template-rows: 50vh 50vh;
+    padding: 0;
   }
-  .background-img{
+  .background-img {
     height: 150vh;
     width: 300vh;
   }
-  .navbar{
+  .navbar {
     grid-row: 2;
     align-items: center;
   }
@@ -519,27 +519,27 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
-  .pagesection{
+  .pagesection {
     padding: 5vh 4vw;
   }
-  .projectimage{
+  .projectimage {
     width: 100%;
     height: auto;
   }
-  .project{
+  .project {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     padding-top: 10px;
     gap: 15px;
   }
-  .showicons{
+  .showicons {
     gap: 10px;
   }
-  .techused{
+  .techused {
     justify-content: center;
   }
   .title {
-    font-size:36px;
+    font-size: 32px;
   }
   .contactbutton {
     font-size: 40px;
@@ -555,7 +555,12 @@ main {
   }
   .navbar {
     grid-template-columns: repeat(3, 1fr) 1.5fr;
-    font-size: 14px;
+  }
+  .navbar > div {
+    font-size: 23px;
+  }
+  .navbar > div :hover {
+    font-size: 23px;
   }
   .resume {
     font-size: 14px;
@@ -589,30 +594,35 @@ main {
   .contact {
     font-size: 22px;
   }
-  .showtitle{
+  .showtitle {
     justify-content: center;
   }
-  .showtitle{
+  .showtitle {
     text-align: center;
   }
-  .showprojects{
+  .showprojects {
     gap: 20px;
+  }
+  .sectionbreak > div {
+    font-size: 18px;
+    padding: 0px 10px;
+    top: -9px;
   }
 }
 .invisible {
   opacity: 0;
 }
-.flags{
+.flags {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 20px;
+  right: 20px;
   display: flex;
   gap: 10px;
   justify-content: center;
   align-items: center;
   z-index: 1;
 }
-.flags>div{
+.flags > div {
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -620,10 +630,26 @@ main {
   border-radius: 15px;
   padding: 10px;
 }
-.flags>div:hover, .selected-flag{
-  background-color: rgba(13, 71, 161,0.5);
+.flags > div:hover,
+.selected-flag {
+  background-color: rgba(13, 71, 161, 0.5);
 }
-.flags svg{
+.flags svg {
   width: 42px;
   height: 28px;
+}
+
+.scene-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.three-scene {
+  width: 100vw;
+  height: 100vw;
+  min-height: 100vh;
+  min-width: 100vh;
 }
