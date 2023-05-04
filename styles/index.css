@@ -5,7 +5,7 @@
   --background2: #dee2e6;
   --color1: #1e88e5;
   --color2: #0d47a1;
-  --color3: #0d090f;
+  --color3: #000000;
   --color4: #262b46;
 }
 
@@ -106,7 +106,7 @@ main {
   border: 2px solid var(--color1);
   width: fit-content;
   color: var(--color1);
-  background-color: rgba(21, 16, 25, 0.65);
+  background-color: rgba(0, 0, 0, 0);
   padding: 8px 16px;
   border-radius: 20px;
   cursor: pointer;
