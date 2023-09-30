@@ -284,6 +284,10 @@ main {
   border-color: #ffffff;
   color: #ffffff;
 }
+.nodecard{
+  border-color: #0db43f;
+  color: #0db43f;
+}
 .firebasecard {
   border-color: #f83f06;
   color: #f83f06;
