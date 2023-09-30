@@ -169,20 +169,15 @@ main {
 .project {
   background-color: rgba(13, 71, 161, 0.3);
   box-sizing: border-box;
-  overflow: hidden;
   border-radius: 25px;
   height: fit-content;
-  grid-template-rows: 285px;
   display: grid;
-  grid-template-columns: 480px 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
   position: relative;
   place-items: center;
-}
-.projectimage {
-  height: 285px;
-  width: 480px;
-  box-sizing: border-box;
+  overflow: hidden;
+
 }
 .showprojects {
   display: flex;
@@ -226,7 +221,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 0px 10px;
+  padding: 10px 10px;
 }
 .showdescription {
   font-size: 25px;
@@ -296,6 +291,8 @@ main {
   position: relative;
   display: grid;
   place-items: center;
+  height: 100%;
+  width: 100%;
 }
 .img-squares {
   position: absolute;
@@ -355,6 +352,7 @@ main {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color1);
 }
+
 .contact {
   color: var(--background1);
   display: flex;
@@ -494,13 +492,9 @@ main {
   .pagesection {
     padding: 5vh 4vw;
   }
-  .projectimage {
-    width: 100%;
-    height: auto;
-  }
   .project {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr 225px;
     padding-top: 10px;
     gap: 15px;
   }
@@ -525,6 +519,7 @@ main {
   .imgwrapper {
     grid-row: 2;
   }
+
   .navbar > div {
     font-size: 23px;
     height: 45px;

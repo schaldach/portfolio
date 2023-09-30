@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 function Company({ title, description, tech, logo, linkedin, url }) {
     const techclasses = {
         'JavaScript': 'jscard',
@@ -5,13 +7,13 @@ function Company({ title, description, tech, logo, linkedin, url }) {
         'React': 'reactcard',
         'Next': 'nextcard',
         'Firebase': 'firebasecard',
-        'Three.js': 'threecard',
         'Node.js': 'nodecard',
+        'Three.js': 'threecard',
     }
     return (
         <div className='project'>
             <div className="imgwrapper">
-                <img className='projectimage' src={logo} /> 
+                <Image objectFit='cover' layout='fill' src={logo} />
             </div>
             <div className="showtext">
                 <div className="showtitle">{title}
