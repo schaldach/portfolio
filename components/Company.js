@@ -9,6 +9,7 @@ function Company({ title, description, tech, logo, linkedin, url }) {
         'Firebase': 'firebasecard',
         'Node.js': 'nodecard',
         'Three.js': 'threecard',
+        'Express.js': 'threecard',
     }
     return (
         <div className='project'>
