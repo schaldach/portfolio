@@ -41,7 +41,9 @@ export default class ThreeScene {
         // this.controls = new OrbitControls(this.camera, this.renderer.domElement);
 
         this.setupScene()
-        this.startAnimation()
+        this.composer.render(this.scene, this.camera)
+        this.composer.render(this.scene, this.camera)
+        // this.startAnimation()
     }
     pauseScene() {
         this.stopAnimation = !this.stopAnimation
