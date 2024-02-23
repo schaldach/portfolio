@@ -611,10 +611,11 @@ main {
   z-index: 0;
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(to bottom, var(--color2), var(--color3));
 }
-.three-scene {
+/* .three-scene {
   width: 100vw;
   height: 100vw;
   min-height: 100vh;
   min-width: 100vh;
-}
+} */

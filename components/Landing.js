@@ -1,4 +1,4 @@
-import ThreeScene from "./ThreeScene";
+import ThreeCanvas from "./ThreeCanvas";
 
 const content = {
   'pt-BR': [
@@ -40,7 +40,7 @@ function Landing({ lang }) {
       </div>
       <div className="title">{content[lang][6]}</div>
       <div className='scene-wrapper'>
-        <ThreeScene />
+        <ThreeCanvas />
       </div>
     </div>
   );
