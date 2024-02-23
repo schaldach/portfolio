@@ -22,6 +22,7 @@ export default class ThreeScene {
         this.scene = new THREE.Scene()
         this.camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 1000)
         this.camera.position.set(55, 35, 55)
+        this.camera.lookAt(new THREE.Vector3())
 
         this.renderScene = new RenderPass(this.scene, this.camera)
         this.composer = new EffectComposer(this.renderer)
@@ -37,7 +38,7 @@ export default class ThreeScene {
         this.scene.background = new THREE.Color(0x000000)
         this.scene.add(new THREE.AmbientLight(0xffffff, 10))
 
-        this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+        // this.controls = new OrbitControls(this.camera, this.renderer.domElement);
 
         this.setupScene()
         this.startAnimation()
@@ -150,54 +151,56 @@ export default class ThreeScene {
     }
     setupScene() {
         const curve = new THREE.CatmullRomCurve3([
-            new THREE.Vector3(52.5, 30, 52.5),
-            new THREE.Vector3(37.5, 30, 55),
-            new THREE.Vector3(45, 20, 40),
+            new THREE.Vector3(57.5, 32.5, 52.5),
+            new THREE.Vector3(45, 20, 45),
             new THREE.Vector3(30, 25, 45),
             new THREE.Vector3(10, 30, 35),
-            new THREE.Vector3(5, 32.5, 20)
+            new THREE.Vector3(5, 32.5, 20),
+            new THREE.Vector3(0, 32.5, -20),
+            new THREE.Vector3(-5, 50, -30)
         ]);
 
-        const geometry = new THREE.TubeGeometry(curve, 20, 1, 8, false);
+        const geometry = new THREE.TubeGeometry(curve, 40, 1.5, 16, false);
         geometry.computeBoundingBox();
-        const material = new THREE.ShaderMaterial({
+        const material = new THREE.MeshBasicMaterial({
+            color: new THREE.Color(0x1e88e5),
             side: THREE.DoubleSide,
-            uniforms: {
-                color1: {
-                    value: new THREE.Color(0x000000)
-                },
-                color2: {
-                    value: new THREE.Color(0x1e88e5)
-                },
-                bboxMin: {
-                    value: geometry.boundingBox.min
-                },
-                bboxMax: {
-                    value: geometry.boundingBox.max
-                }
-            },
-            vertexShader: `
-                uniform vec3 bboxMin;
-                uniform vec3 bboxMax;
+            // uniforms: {
+            //     color1: {
+            //         value: new THREE.Color(0x000000)
+            //     },
+            //     color2: {
+            //         value: new THREE.Color(0x1e88e5)
+            //     },
+            //     bboxMin: {
+            //         value: geometry.boundingBox.min
+            //     },
+            //     bboxMax: {
+            //         value: geometry.boundingBox.max
+            //     }
+            // },
+            // vertexShader: `
+            //     uniform vec3 bboxMin;
+            //     uniform vec3 bboxMax;
               
-                varying vec2 vUv;
+            //     varying vec2 vUv;
             
-                void main() {
-                  vUv.y = (position.y - bboxMin.y) / (bboxMax.y - bboxMin.y);
-                  gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
-                }
-              `,
-            fragmentShader: `
-                uniform vec3 color1;
-                uniform vec3 color2;
+            //     void main() {
+            //       vUv.y = (position.y - bboxMin.y) / (bboxMax.y - bboxMin.y);
+            //       gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
+            //     }
+            //   `,
+            // fragmentShader: `
+            //     uniform vec3 color1;
+            //     uniform vec3 color2;
               
-                varying vec2 vUv;
+            //     varying vec2 vUv;
                 
-                void main() {
+            //     void main() {
                   
-                  gl_FragColor = vec4(mix(color1, color2, vUv.y), 1.0);
-                }
-              `,
+            //       gl_FragColor = vec4(mix(color1, color2, vUv.y), 1.0);
+            //     }
+            //   `,
         });
 
         // Create the final object to add to the scene
@@ -233,7 +236,7 @@ export default class ThreeScene {
             if (!this.stopAnimation) {
                 window.requestAnimationFrame(animate);
             }
-            this.controls.update()
+            // this.controls.update()
             this.composer.render(this.scene, this.camera)
         }
         animate()
