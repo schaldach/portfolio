@@ -613,6 +613,24 @@ main {
   height: 100vh;
   background-color: var(--color3);
 }
+
+.landing-buttons{
+  bottom: 15px;
+  right: 30px;
+  position: absolute;
+}
+
+.landing-buttons button{
+  font-family: "Raleway", sans-serif;
+  color: var(--background1);
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  background: none;
+  font-weight: bold;
+  border-radius: 15px;
+}
 /* .three-scene {
   width: 100vw;
   height: 100vw;

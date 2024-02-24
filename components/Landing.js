@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ThreeCanvas from "./ThreeCanvas";
 
 const content = {
@@ -24,6 +25,7 @@ const content = {
 }
 
 function Landing({ lang }) {
+  const [animationEnabled, setAnimation] = useState(true)
   return (
     <div className="pagesection homesection">
       <div className="navbar">
@@ -40,7 +42,10 @@ function Landing({ lang }) {
       </div>
       <div className="title">{content[lang][6]}</div>
       <div className='scene-wrapper'>
-        <ThreeCanvas />
+        <ThreeCanvas animationEnabled={animationEnabled}/>
+        {/* <div className="landing-buttons">
+          <button onClick={() => {setAnimation(!animationEnabled)}}>Mudar animação</button>
+        </div> */}
       </div>
     </div>
   );

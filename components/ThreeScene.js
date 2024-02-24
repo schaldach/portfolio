@@ -1,7 +1,5 @@
 import * as THREE from 'three'
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { FlyControls } from 'three/addons/controls/FlyControls.js';
-import { ArcballControls } from 'three/addons/controls/ArcballControls.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
@@ -18,7 +16,7 @@ export default class ThreeScene {
         this.renderer.setSize(window.innerWidth, window.innerHeight)
         this.renderer.shadowMap.enabled = true;
 
-        this.stopAnimation = false
+        this.animationEnabled = true
 
         this.scene = new THREE.Scene()
         this.camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 1000)
@@ -41,21 +39,22 @@ export default class ThreeScene {
 
         this.controls = new FlyControls(this.camera, this.renderer.domElement);
         this.controls.movementSpeed = 0
+        this.controls.rollSpeed = 0.01
 
         this.points = []
 
         this.setupScene()
         this.startAnimation()
     }
-    pauseScene() {
-        this.stopAnimation = !this.stopAnimation
-        if (!this.stopAnimation) this.startAnimation()
+    changeAnimation(animationEnabled) {
+        this.animationEnabled = animationEnabled
+        if (!this.animationEnabled) {}
+        // else this.startAnimation()
     }
-    createPoint(){
-        const point = new THREE.Mesh(new THREE.SphereGeometry(0.05), new THREE.MeshBasicMaterial({color: new THREE.Color(0x1e88e5), side: THREE.DoubleSide}))
+    createPoint() {
+        const point = new THREE.Mesh(new THREE.SphereGeometry(0.05), new THREE.MeshBasicMaterial({ color: new THREE.Color(0x1e88e5), side: THREE.DoubleSide }))
         point.position.randomDirection()
-        console.log(point.position);
-        point.position.multiplyScalar(Math.random()*3+1.5)
+        point.position.multiplyScalar(Math.random() * 3 + 1.5)
 
         const pointGroup = new THREE.Group()
         pointGroup.add(point)
@@ -87,7 +86,7 @@ export default class ThreeScene {
         const tubeMesh = new THREE.Mesh(geometry, material);
         this.scene.add(tubeMesh)
 
-        for(let i=0; i<500; i++){
+        for (let i = 0; i < 500; i++) {
             const pointGroup = this.createPoint()
             pointGroup.currentCurvePoint = Math.random()
             pointGroup.position.copy(this.curve.getPoint(pointGroup.currentCurvePoint))
@@ -96,16 +95,14 @@ export default class ThreeScene {
         this.scene.add(...this.points)
     }
 
-    startAnimation() {
+    async startAnimation() {
         const animate = () => {
-            if (!this.stopAnimation) {
-                window.requestAnimationFrame(animate);
-            }
-            this.controls.update(0.1)
+            window.requestAnimationFrame(animate)
+            this.controls.update(1 / 60)
 
             this.composer.render(this.scene, this.camera)
             this.points.forEach(point => {
-                point.currentCurvePoint = point.currentCurvePoint+0.002 > 1 ? 0.002 : point.currentCurvePoint+0.002
+                point.currentCurvePoint = point.currentCurvePoint + 0.002 > 1 ? 0.002 : point.currentCurvePoint + 0.002
                 point.position.copy(this.curve.getPoint(point.currentCurvePoint))
             })
         }
