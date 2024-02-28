@@ -620,16 +620,21 @@ main {
   position: absolute;
 }
 
+.landing-buttons svg{
+  width: 30px;
+  height: 30px;
+}
+
 .landing-buttons button{
   font-family: "Raleway", sans-serif;
   color: var(--background1);
-  font-size: 15px;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
   cursor: pointer;
   border: none;
-  padding: 5px 10px;
   background: none;
   font-weight: bold;
-  border-radius: 15px;
 }
 /* .three-scene {
   width: 100vw;
